@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Выездной нарколог</title>
+  <style>
+    :root {
+      --primary-color: #5D4C9B;
+      --light-bg: #F8F8FD;
+      --white: #FFFFFF;
+      --text-dark: #333333;
+      --text-gray: #666666;
+      --border-color: #E0E0E0;
+      --purple-gradient: linear-gradient(90deg, #5D4C9B 0%, #7A6AC8 100%);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--light-bg);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Header Block */
+    .doctor-block {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .doctor-block__title {
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: var(--primary-color);
+      margin-bottom: 15px;
+    }
+
+    .doctor-block__subtitle {
+      font-size: 1rem;
+      color: var(--text-gray);
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+
+    /* infocards Grid */
+    .infocards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .infocard {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .infocard:hover {
+      transform: translateY(-5px);
+    }
+
+    .infocard__icon {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 15px;
+    }
+
+    .infocard__title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--primary-color);
+      margin-bottom: 10px;
+    }
+
+    .infocard__text {
+      font-size: 0.9rem;
+      color: var(--text-gray);
+    }
+
+    /* What Doctor Brings Block */
+    .doctor-brings {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 30px;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .doctor-brings__image {
+      width: 300px;
+      height: auto;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .doctor-brings__content {
+      flex: 1;
+    }
+
+    .doctor-brings__title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+
+    .doctor-brings__items {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+
+    .doctor-brings__item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .doctor-brings__item-icon {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+    }
+
+    .doctor-brings__item-text {
+      font-size: 0.9rem;
+      color: var(--text-gray);
+    }
+
+    /* Quote */
+    .quote {
+      background: var(--white);
+      border-left: 4px solid var(--primary-color);
+      padding: 20px 25px;
+      border-radius: 0 12px 12px 0;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: var(--text-dark);
+      text-align: center;
+    }
+
+    /* Media Queries */
+    @media (max-width: 1024px) {
+      .infocards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .doctor-brings {
+        flex-direction: column;
+      }
+
+      .doctor-brings__image {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 15px;
+      }
+
+      .doctor-block__title {
+        font-size: 2rem;
+      }
+
+      .doctor-block__subtitle {
+        font-size: 0.9rem;
+      }
+
+      .infocards-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .doctor-brings__items {
+        grid-template-columns: 1fr;
+      }
+
+      .doctor-brings__title {
+        font-size: 1.3rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .doctor-block__title {
+        font-size: 1.5rem;
+      }
+
+      .infocard {
+        padding: 20px;
+      }
+
+      .infocard__icon {
+        width: 32px;
+        height: 32px;
+      }
+
+      .infocard__title {
+        font-size: 1rem;
+      }
+
+      .doctor-brings__title {
+        font-size: 1.2rem;
+      }
+
+      .quote {
+        font-size: 1rem;
+        padding: 15px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Блок о выезде врача -->
+    <section class="doctor-block">
+      <h1 class="doctor-block__title">Выездной нарколог</h1>
+      <p class="doctor-block__subtitle">
+        Когда кажется, что выхода нет — выход есть. Просто позвоните. Мы поможем без осуждения, анонимно и уже через 37 минут.
+      </p>
+    </section>
+
+
+    <div class="infocards-grid">
+
+      <div class="infocard">
+        <img src="ad11.svg" alt="Иконка" class="infocard__icon">
+        <h3 class="infocard__title">Запой 3 дня. Стыдно звонить</h3>
+        <p class="infocard__text">Оставляете заявку на сайте или звоните по телефону. Консультант уточняет детали.</p>
+      </div>
+
+
+      <div class="infocard">
+        <img src="people.svg" alt="Иконка" class="infocard__icon">
+        <h3 class="infocard__title">Родители в панике: сын не приходит в себя</h3>
+        <p class="infocard__text">Врач приедет, стабилизирует состояние и даст чёткие рекомендации.</p>
+      </div>
+
+
+      <div class="infocard">
+        <img src="ad12.svg" alt="Иконка" class="infocard__icon">
+        <h3 class="infocard__title">После «ночной тусовки» — рвота, тремор, страх смерти</h3>
+        <p class="infocard__text">Это не «похмелье», это интоксикация. Мы справимся — дома, без больницы.</p>
+      </div>
+
+
+      <div class="infocard">
+        <img src="ad13.svg" alt="Иконка" class="infocard__icon">
+        <h3 class="infocard__title">Утром совещание, а вы не в состоянии встать</h3>
+        <p class="infocard__text">Мы вернём вас к жизни до начала рабочего дня. Анонимно.</p>
+      </div>
+
+
+      <div class="infocard">
+        <img src="ad14.svg" alt="Иконка" class="infocard__icon">
+        <h3 class="infocard__title">Бабушка перепутала таблетки после ссоры с дочерью</h3>
+        <p class="infocard__text">Пожилые — особенно уязвимы. Мы приедем быстро, бережно и с уважением к возрасту.</p>
+      </div>
+
+   
+      <div class="infocard">
+        <img src="info.svg" alt="Иконка" class="infocard__icon">
+        <h3 class="infocard__title">После запоя — галлюцинации и агрессия</h3>
+        <p class="infocard__text">Это не «просто похмелье» — это делирий (белая горячка). Требуется срочная помощь. Мы знаем, как действовать.</p>
+      </div>
+    </div>
+
+    <!-- Что привозит врач -->
+    <section class="doctor-brings">
+      <img src="case.png" alt="Аптечка с лекарствами" class="doctor-brings__image">
+      <div class="doctor-brings__content">
+        <h2 class="doctor-brings__title">Что привозит врач?</h2>
+        <div class="doctor-brings__items">
+          <div class="doctor-brings__item">
+            <img src="ad9.svg" alt="Иконка" class="doctor-brings__item-icon">
+            <span class="doctor-brings__item-text">Портативный ЭКГ (при необходимости)</span>
+          </div>
+          <div class="doctor-brings__item">
+            <img src="ad7.svg" alt="Иконка" class="doctor-brings__item-icon">
+            <span class="doctor-brings__item-text">Капельницы (инфузионные системы)</span>
+          </div>
+          <div class="doctor-brings__item">
+            <img src="ad8.svg" alt="Иконка" class="doctor-brings__item-icon">
+            <span class="doctor-brings__item-text">Пульсоксиметр и тонометр</span>
+          </div>
+          <div class="doctor-brings__item">
+            <img src="ad6.svg" alt="Иконка" class="doctor-brings__item-icon">
+            <span class="doctor-brings__item-text">Сертифицированные детокс-препараты</span>
+          </div>
+          <div class="doctor-brings__item">
+            <img src="ad10.svg" alt="Иконка" class="doctor-brings__item-icon">
+            <span class="doctor-brings__item-text">Бланк анонимного отчёта</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Цитата -->
+    <blockquote class="quote">
+      «Мы не судим. Мы лечим. Ваша боль — наша работа. Ваша тайна — наша честь.»
+    </blockquote>
+  </div>
+</body>
+</html>

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Цены на услуги</title>
+  <style>
+    :root {
+      --prices-primary-color: #483F84;
+      
+      --prices-secondary-color:#6C5DCE;
+      --light-purple-bg:  #F9F8FF;
+      --white: #FFFFFF;
+      --text-dark: #333333;
+      --text-gray: #666666;
+      --border-color: #E0E0E0;
+      --accent-purple: #7D6BEA;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--light-purple-bg);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    .prices-block {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: var(--white);
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .prices-block__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .prices-block__back-link {
+      color: var(--prices-primary-color);
+      text-decoration: none;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .prices-block__back-link::after {
+      content: "→";
+      font-weight: bold;
+    }
+
+    .prices-block__title {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--prices-primary-color);
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .prices-block__description {
+      font-size: 14px;
+      color: var(--text-gray);
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 30px;
+    }
+
+    .prices-block__services-container {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .prices-block__services-column {
+      flex: 1;
+          background-color: var(--light-purple-bg);
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: var(--shadow);
+    }
+
+    .prices-block__services-column-title {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--prices-primary-color);
+      margin-bottom: 20px;
+    }
+
+    .prices-block__services-list {
+      list-style: none;
+    }
+
+    .prices-block__service-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .prices-block__service-name {
+      font-size: 16px;
+      color: var(--text-dark);
+    }
+
+    .prices-block__service-price {
+      font-size: 16px;
+      color: var(--prices-secondary-color);
+      font-weight: 600;
+    }
+
+    .prices-block__cost-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    .prices-block__cost-info-text {
+      flex: 1;
+    }
+
+    .prices-block__cost-info-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--prices-primary-color);
+      margin-bottom: 5px;
+    }
+
+    .prices-block__cost-info-description {
+      font-size: 14px;
+      color: var(--text-gray);
+    }
+
+    .prices-block__calculate-button {
+      background-color: var(--accent-purple);
+      color: var(--white);
+      border: none;
+      border-radius: 8px;
+      padding: 12px 20px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .prices-block__calculate-button:hover {
+      background-color: #6b5ea2;
+    }
+
+    .prices-block__calculate-button-icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    .prices-block__about-section {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .prices-block__about-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--prices-primary-color);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .prices-block__about-title::before,
+    .prices-block__about-title::after {
+      content: "{";
+      font-weight: bold;
+    }
+
+    .prices-block__about-title::after {
+      content: "}";
+    }
+
+    .prices-block__about-text {
+      font-size: 16px;
+      color: var(--text-gray);
+      line-height: 1.8;
+    }
+
+    .prices-block__about-text p {
+      margin-bottom: 15px;
+    }
+
+    /* Адаптивность */
+    @media (max-width: 1024px) {
+      .prices-block {
+        margin: 20px 15px;
+        padding: 20px;
+      }
+
+      .prices-block__services-container {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .prices-block__services-column {
+        padding: 20px;
+      }
+
+      .prices-block__cost-info {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .prices-block__calculate-button {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .prices-block__header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+      }
+
+      .prices-block__title {
+        font-size: 28px;
+      }
+
+      .prices-block__description {
+        font-size: 14px;
+      }
+
+      .prices-block__services-column-title {
+        font-size: 18px;
+      }
+
+      .prices-block__service-item {
+        padding: 12px 0;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .prices-block__service-name {
+        font-size: 15px;
+      }
+
+      .prices-block__service-price {
+        font-size: 15px;
+      }
+
+      .prices-block__cost-info-title {
+        font-size: 16px;
+      }
+
+      .prices-block__cost-info-description {
+        font-size: 14px;
+      }
+
+      .prices-block__about-title {
+        font-size: 16px;
+      }
+
+      .prices-block__about-text {
+        font-size: 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .prices-block {
+        margin: 10px 10px;
+        padding: 15px;
+      }
+
+      .prices-block__title {
+        font-size: 24px;
+      }
+
+      .prices-block__services-column {
+        padding: 15px;
+      }
+
+      .prices-block__service-item {
+        padding: 10px 0;
+      }
+
+      .prices-block__service-name {
+        font-size: 14px;
+      }
+
+      .prices-block__service-price {
+        font-size: 14px;
+      }
+
+      .prices-block__calculate-button {
+        padding: 10px 15px;
+        font-size: 14px;
+      }
+
+      .prices-block__about-title {
+        font-size: 14px;
+      }
+
+      .prices-block__about-text {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="prices-block">
+    <div class="prices-block__header">
+      <a href="#" class="prices-block__back-link">Все цены</a>
+    </div>
+
+    <h1 class="prices-block__title">Цены на услуги</h1>
+    <p class="prices-block__description">
+      Точные цены зависят от сложности случая, района Москвы и срочности вызова. Предоставленные цены являются ориентировочными. Точный расчет врач сделает после осмотра пациента.
+    </p>
+
+    <div class="prices-block__services-container">
+      <div class="prices-block__services-column">
+        <h2 class="prices-block__services-column-title">Основные услуги</h2>
+        <ul class="prices-block__services-list">
+          <li class="prices-block__service-item">
+            <span class="prices-block__service-name">Выезд врача в пределах МКАД</span>
+            <span class="prices-block__service-price">от 3 500 ₽</span>
+          </li>
+          <li class="prices-block__service-item">
+            <span class="prices-block__service-name">Вывод из запоя (1-2 дня)</span>
+            <span class="prices-block__service-price">от 6 000 ₽</span>
+          </li>
+          <li class="prices-block__service-item">
+            <span class="prices-block__service-name">Детоксикация организма</span>
+            <span class="prices-block__service-price">от 4 500 ₽</span>
+          </li>
+          <li class="prices-block__service-item">
+            <span class="prices-block__service-name">Кодирование (медикаментозное)</span>
+            <span class="prices-block__service-price">от 8 000 ₽</span>
+          </li>
+          <li class="prices-block__service-item">
+            <span class="prices-block__service-name">Снятие ломки (наркотическая)</span>
+            <span class="prices-block__service-price">от 7 500 ₽</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="prices-block__services-column">
+        <h2 class="prices-block__services-column-title">Дополнительные услуги</h2>
+        <ul class="prices-block__services-list">
+          <li class="prices-block__service-item">
+            <span class="prices-block__service-name">Психологическая консультация</span>
+            <span class="prices-block__service-price">от 2 500 ₽</span>
+          </li>
+          <li class="prices-block__service-item">
+            <span class="prices-block__service-name">Капельница с витаминами</span>
+            <span class="prices-block__service-price">от 3 200 ₽</span>
+          </li>
+          <li class="prices-block__service-item">
+            <span class="prices-block__service-name">ЭКГ, анализы крови</span>
+            <span class="prices-block__service-price">от 1 800 ₽</span>
+          </li>
+          <li class="prices-block__service-item">
+            <span class="prices-block__service-name">Повторный вызов (в течение 24ч)</span>
+            <span class="prices-block__service-price">от 2 000 ₽</span>
+          </li>
+          <li class="prices-block__service-item">
+            <span class="prices-block__service-name">Консультация психиатра</span>
+            <span class="prices-block__service-price">от 4 000 ₽</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="prices-block__cost-info">
+      <div class="prices-block__cost-info-text">
+        <h3 class="prices-block__cost-info-title">Стоимость услуг ориентировочная</h3>
+        <p class="prices-block__cost-info-description">Точную цену врач сообщит после консультации и осмотра пациента</p>
+      </div>
+      <button class="prices-block__calculate-button">
+        <img src="calc.svg" alt="Калькулятор" class="prices-block__calculate-button-icon">
+        Рассчитать стоимость для моего случая
+      </button>
+    </div>
+
+    <div class="prices-block__about-section">
+      <h3 class="prices-block__about-title">О ценах</h3>
+      <div class="prices-block__about-text">
+        <p>Мы не скрываем реальную стоимость и не используем маркетинговые «ловушки». Финальная цена всегда обсуждается с врачом на месте после осмотра. Это гарантирует, что вы платите только за действительно необходимую помощь — ни больше, ни меньше.</p>
+        <p>Все наши цены включают выезд, диагностику, препараты и последующую консультацию. Дополнительные платежи возможны только при согласии пациента или его родственников.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

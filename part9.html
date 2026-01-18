@@ -1,0 +1,419 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лицензии и документы</title>
+    <style>
+        :root {
+            --primary-color: #4a3c8c;
+            --licenses-secondary-color: #7b6fd2;
+            --light-color: #f8f9fa;
+            --text-color: #333;
+            --border-color: #e9ecef;
+            --hover-color: #f0f2f5;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .licenses-block {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .licenses-block__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .licenses-block__title {
+            font-size: 36px;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .licenses-block__subtitle {
+            font-size: 16px;
+            color: #666;
+            max-width: 600px;
+        }
+
+        .licenses-block__link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--licenses-secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .licenses-block__link:hover {
+            text-decoration: underline;
+        }
+
+        .licenses-block__link::after {
+            content: "↑";
+            margin-left: 5px;
+            font-size: 12px;
+        }
+
+        .licenses-slider {
+            position: relative;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+
+        .licenses-slider__container {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            padding: 0 20px;
+        }
+
+        .licenses-slider__container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .license-card {
+            min-width: 280px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .license-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .license-card__image {
+            width: 100%;
+            height: 280px;
+            object-fit: contain;
+            background-color: #f8f9fa;
+            padding: 15px;
+            
+            border-radius: 32px;
+        }
+
+        .license-card__content {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+
+            margin-right: 20px;
+            margin-left: 20px;
+            margin-bottom: 5px;
+            border-radius: 32px;
+        }
+
+        .license-card__title {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-color);
+            margin-right: 10px;
+            flex: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+
+        .license-card__icon {
+            width: 40px;
+            height: 40px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+
+
+
+        .license-card__icon:hover {
+             background-color: var(--licenses-secondary-color);
+        
+        }
+
+        .license-card__icon:hover img{
+              filter: brightness(1004%) contrast(100%);
+        }
+
+
+
+        .license-card__icon:hover {
+            background-color: var(--primary-color);
+        }
+
+
+        .licenses-slider__arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            transition: var(--transition);
+        }
+
+        .licenses-slider__arrow:hover {
+            background: var(--licenses-secondary-color);
+            color: white;
+            border-color: var(--licenses-secondary-color);
+        }
+
+        .licenses-slider__arrow--left {
+            left: 10px;
+        }
+
+        .licenses-slider__arrow--right {
+            right: 10px;
+        }
+
+        .licenses-slider__arrow::before {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .licenses-slider__arrow--left::before {
+            content: "‹";
+        }
+
+        .licenses-slider__arrow--right::before {
+            content: "›";
+        }
+
+        /* Мобильная верстка */
+        @media (max-width: 768px) {
+            .licenses-block {
+                margin: 20px 10px;
+                padding: 10px;
+            }
+
+            .licenses-block__header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            .licenses-block__title {
+                font-size: 28px;
+            }
+
+            .licenses-block__subtitle {
+                font-size: 14px;
+                max-width: 100%;
+            }
+
+            .licenses-slider__container {
+                gap: 15px;
+                padding: 0 10px;
+            }
+
+            .license-card {
+                min-width: 240px;
+            }
+
+            .license-card__image {
+                height: 240px;
+                padding: 10px;
+            }
+
+            .license-card__content {
+                padding: 15px;
+            }
+
+            .license-card__title {
+                font-size: 14px;
+                -webkit-line-clamp: 2;
+            }
+
+            .license-card__icon {
+                width: 28px;
+                height: 28px;
+            }
+
+            .licenses-slider__arrow {
+                width: 36px;
+                height: 36px;
+                font-size: 18px;
+            }
+        }
+
+        /* Планшетная верстка */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .licenses-block {
+                margin: 30px auto;
+                padding: 15px;
+            }
+
+            .licenses-block__title {
+                font-size: 32px;
+            }
+
+            .license-card {
+                min-width: 260px;
+            }
+
+            .license-card__image {
+                height: 260px;
+            }
+
+            .license-card__title {
+                font-size: 15px;
+            }
+        }
+
+        /* Скрытие стрелок на мобильных устройствах при маленьком количестве элементов */
+        @media (max-width: 768px) {
+            .licenses-slider__arrow {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="licenses-block">
+        <div class="licenses-block__header">
+            <a href="#" class="licenses-block__link">Все лицензии</a>
+            <div>
+                <h1 class="licenses-block__title">Лицензии и документы</h1>
+                <p class="licenses-block__subtitle">Все наши специалисты и клиника имеют полный пакет разрешительной документации.</p>
+            </div>
+        </div>
+
+        <div class="licenses-slider">
+            <div class="licenses-slider__arrow licenses-slider__arrow--left" onclick="scrollLeft()"></div>
+            <div class="licenses-slider__container" id="sliderContainer">
+                <div class="license-card">
+                    <img src="license.png" alt="Лицензия" class="license-card__image">
+                    <div class="license-card__content">
+                        <div class="license-card__title">Название лицензии</div>
+
+                        <div class="license-card__icon">
+                       <img width="20" height="20" src="search.svg" alt="Поиск">
+                       </div>
+                    </div>
+                </div>
+                <div class="license-card">
+                    <img src="license.png" alt="Лицензия" class="license-card__image">
+                    <div class="license-card__content">
+                        <div class="license-card__title">Название лицензии в две строки</div>
+                         
+                        <div class="license-card__icon">
+                       <img width="20" height="20" src="search.svg" alt="Поиск">
+                       </div>
+                    </div>
+                </div>
+                <div class="license-card">
+                    <img src="license.png" alt="Лицензия" class="license-card__image">
+                    <div class="license-card__content">
+                        <div class="license-card__title">Большое название лицензии в три строки</div>
+                         
+                        <div class="license-card__icon">
+                       <img width="20" height="20" src="search.svg" alt="Поиск">
+                       </div>
+                    </div>
+                </div>
+                <div class="license-card">
+                    <img src="license.png" alt="Лицензия" class="license-card__image">
+                    <div class="license-card__content">
+                        <div class="license-card__title">Название лицензии</div>
+                        
+                        <div class="license-card__icon">
+                       <img width="20" height="20" src="search.svg" alt="Поиск">
+                       </div>
+                    </div>
+                </div>
+                <div class="license-card">
+                    <img src="license.png" alt="Лицензия" class="license-card__image">
+                    <div class="license-card__content">
+                        <div class="license-card__title">Еще одна лицензия</div>
+                     
+                        <div class="license-card__icon">
+                       <img width="20" height="20" src="search.svg" alt="Поиск">
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <div class="licenses-slider__arrow licenses-slider__arrow--right" onclick="scrollRight()"></div>
+        </div>
+    </div>
+
+    <script>
+        function scrollLeft() {
+            const container = document.getElementById('sliderContainer');
+            container.scrollBy({
+                left: -300,
+                behavior: 'smooth'
+            });
+        }
+
+        function scrollRight() {
+            const container = document.getElementById('sliderContainer');
+            container.scrollBy({
+                left: 300,
+                behavior: 'smooth'
+            });
+        }
+
+        // Для адаптивности - скрываем стрелки, если контент помещается
+        function checkArrowsVisibility() {
+            const container = document.getElementById('sliderContainer');
+            const arrows = document.querySelectorAll('.licenses-slider__arrow');
+            
+            if (window.innerWidth <= 768) {
+                arrows.forEach(arrow => arrow.style.display = 'none');
+                return;
+            }
+            
+            if (container.scrollWidth <= container.clientWidth) {
+                arrows.forEach(arrow => arrow.style.display = 'none');
+            } else {
+                arrows.forEach(arrow => arrow.style.display = 'flex');
+            }
+        }
+
+        window.addEventListener('resize', checkArrowsVisibility);
+        document.addEventListener('DOMContentLoaded', checkArrowsVisibility);
+    </script>
+</body>
+</html>

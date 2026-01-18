@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Варианты лечения</title>
+  <style>
+    /* Reset & Base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    /* Section Title */
+    .treatment-options {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .treatment-options__title {
+      font-size: 36px;
+      font-weight: 600;
+      color: #4a3c8c;
+      margin-bottom: 16px;
+    }
+
+    .treatment-options__description {
+      font-size: 16px;
+      color: #555;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Cards Grid */
+    .treatment-options__cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    /* Card */
+    .treatment-card {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .treatment-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+
+    /* Price */
+    .treatment-card__price {
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 8px;
+    }
+
+    /* Title */
+    .treatment-card__title {
+      font-size: 20px;
+      font-weight: 600;
+      color: #4a3c8c;
+      margin-bottom: 16px;
+    }
+
+    /* Description */
+    .treatment-card__description {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    /* List */
+    .treatment-card__list {
+      list-style: none;
+      margin-bottom: 24px;
+    }
+
+    .treatment-card__list-item {
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 8px;
+      position: relative;
+      padding-left: 16px;
+    }
+
+     .treatment-card__list-item:hover {
+         color: white;
+     }
+    .treatment-card__list-item::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      /* color: #4a3c8c; */
+    }
+
+    /* Button */
+    .treatment-card__button {
+      width: 100%;
+      padding: 12px;
+      background: #6e57e0;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      text-align: center;
+    }
+
+    .treatment-card__button:hover {
+      background: #5a45cc;
+    }
+
+    /* Hover Background Image */
+    .treatment-card--home:hover {
+      background: url('home.png') no-repeat right bottom / cover, linear-gradient(to bottom, #6e57e0, #5a45cc);
+      color: white;
+    }
+
+    .treatment-card--home:hover .treatment-card__title,
+    .treatment-card--home:hover .treatment-card__description,
+    .treatment-card--home:hover .treatment-card__list-item,
+    .treatment-card--home:hover .treatment-card__price {
+      color: white;
+    }
+
+    .treatment-card--stacionar:hover {
+      background: url('stacionar.png') no-repeat right bottom / cover, linear-gradient(to bottom, #6e57e0, #5a45cc);
+      color: white;
+    }
+
+    .treatment-card--stacionar:hover .treatment-card__title,
+    .treatment-card--stacionar:hover .treatment-card__description,
+    .treatment-card--stacionar:hover .treatment-card__list-item,
+    .treatment-card--stacionar:hover .treatment-card__price {
+      color: white;
+    }
+
+    .treatment-card--centr:hover {
+      background: url('centr.png') no-repeat right bottom / cover, linear-gradient(to bottom, #6e57e0, #5a45cc);
+      color: white;
+    }
+
+    .treatment-card--centr:hover .treatment-card__title,
+    .treatment-card--centr:hover .treatment-card__description,
+    .treatment-card--centr:hover .treatment-card__list-item,
+    .treatment-card--centr:hover .treatment-card__price {
+      color: white;
+    }
+
+    .treatment-card--family:hover {
+      background: url('family.png') no-repeat right bottom / cover, linear-gradient(to bottom, #6e57e0, #5a45cc);
+      color: white;
+    }
+
+    .treatment-card--family:hover .treatment-card__title,
+    .treatment-card--family:hover .treatment-card__description,
+    .treatment-card--family:hover .treatment-card__list-item,
+    .treatment-card--family:hover .treatment-card__price {
+      color: white;
+    }
+
+    /* Mobile & Tablet Adaptivity */
+    @media (max-width: 1024px) {
+      .treatment-options__cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 10px;
+      }
+
+      .treatment-options__title {
+        font-size: 28px;
+      }
+
+      .treatment-options__description {
+        font-size: 14px;
+      }
+
+      .treatment-options__cards {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .treatment-card {
+        padding: 20px;
+      }
+
+      .treatment-card__title {
+        font-size: 18px;
+      }
+
+      .treatment-card__description {
+        font-size: 13px;
+      }
+
+      .treatment-card__list-item {
+        font-size: 13px;
+      }
+
+      .treatment-card__button {
+        font-size: 14px;
+        padding: 10px;
+      }
+    }
+
+    /* For very small screens */
+    @media (max-width: 480px) {
+      .treatment-options__title {
+        font-size: 24px;
+      }
+
+      .treatment-card__price {
+        font-size: 12px;
+      }
+
+      .treatment-card__title {
+        font-size: 16px;
+      }
+
+      .treatment-card__description {
+        font-size: 12px;
+      }
+
+      .treatment-card__list-item {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <section class="treatment-options">
+      <h2 class="treatment-options__title">Варианты лечения</h2>
+      <p class="treatment-options__description">
+        Мы предлагаем различные форматы оказания помощи в зависимости от тяжести состояния и предпочтений пациента. Каждый вариант имеет свои преимущества и показания.
+      </p>
+
+      <div class="treatment-options__cards">
+        <!-- Карточка 1: На дому -->
+        <div class="treatment-card treatment-card--home">
+          <div class="treatment-card__price">от 13 000 ₽</div>
+          <h3 class="treatment-card__title">На дому</h3>
+          <p class="treatment-card__description">
+            Полный курс лечения в привычной обстановке. Врач приезжает с оборудованием и препаратами. Идеально для начальных стадий зависимости и пациентов, ценивших комфорт и анонимность.
+          </p>
+          <ul class="treatment-card__list">
+            <li class="treatment-card__list-item">Анонимность</li>
+            <li class="treatment-card__list-item">Комфортные условия</li>
+            <li class="treatment-card__list-item">Экономия времени</li>
+            <li class="treatment-card__list-item">Минимум стресса</li>
+          </ul>
+          <button class="treatment-card__button">Подробнее</button>
+        </div>
+
+        <!-- Карточка 2: Стационар -->
+        <div class="treatment-card treatment-card--stacionar">
+          <div class="treatment-card__price">от 35 000 ₽/месяц</div>
+          <h3 class="treatment-card__title">Стационар</h3>
+          <p class="treatment-card__description">
+            Круглосуточное наблюдение в комфортных условиях клиники. Индивидуальный подход, комплексная терапия, психологическая поддержка. Подходит для тяжелых форм зависимости.
+          </p>
+          <ul class="treatment-card__list">
+            <li class="treatment-card__list-item">24/7 наблюдение врачей</li>
+            <li class="treatment-card__list-item">Комплексное лечение</li>
+            <li class="treatment-card__list-item">Современное оборудование</li>
+            <li class="treatment-card__list-item">Изоляция от триггеров</li>
+          </ul>
+          <button class="treatment-card__button">Подробнее</button>
+        </div>
+
+        <!-- Карточка 3: Реабилитационный центр -->
+        <div class="treatment-card treatment-card--centr">
+          <div class="treatment-card__price">от 85 000 ₽/месяц</div>
+          <h3 class="treatment-card__title">Реабилитационный центр</h3>
+          <p class="treatment-card__description">
+            Долгосрочное восстановление в загородном центре. Программы на 1-6 месяцев с социальной адаптацией и трудоустройством. Гарантия стойкой ремиссии.
+          </p>
+          <ul class="treatment-card__list">
+            <li class="treatment-card__list-item">Полная изоляция</li>
+            <li class="treatment-card__list-item">Групповая терапия</li>
+            <li class="treatment-card__list-item">Восстановление психики</li>
+            <li class="treatment-card__list-item">Подготовка к жизни</li>
+          </ul>
+          <button class="treatment-card__button">Подробнее</button>
+        </div>
+
+        <!-- Карточка 4: Семейная терапия -->
+        <div class="treatment-card treatment-card--family">
+          <div class="treatment-card__price">от 4 000 ₽/сессия</div>
+          <h3 class="treatment-card__title">Семейная терапия</h3>
+          <p class="treatment-card__description">
+            Работа с семьей зависимого. Обучение правильному поведению, поддержке и предотвращению созависимости. Помощь в восстановлении доверительных отношений.
+          </p>
+          <ul class="treatment-card__list">
+            <li class="treatment-card__list-item">Работа с созависимостью</li>
+            <li class="treatment-card__list-item">Восстановление отношений</li>
+            <li class="treatment-card__list-item">Обучение поддержке</li>
+            <li class="treatment-card__list-item">Профилактика рецидивов</li>
+          </ul>
+          <button class="treatment-card__button">Подробнее</button>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
