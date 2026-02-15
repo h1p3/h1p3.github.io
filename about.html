@@ -1,0 +1,1525 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Unbounded&display=swap" rel="stylesheet" />
+    <title>Вывод из запоя — Выездная наркология</title>
+
+    <link href="./assets/css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="./assets/js/script.js"></script>
+
+</head>
+
+<body class="service-inner">
+
+    <header class="header" id="header">
+        <div class="header__inner" style="flex-direction: column;">
+            <div class="header__inner">
+                <a href="index.html" class="header__logo">
+                    <img src="./assets/images/purpletruck.svg" alt="Логотип" />
+                    Выездная<br>наркология
+                </a>
+                <div class="header__leadmagnit">
+                    <div class="header__phone">
+                        <img src="./assets/images/purplecalendar.svg" alt="Расписание" />
+                        <p>Круглосуточно</p>
+                    </div>
+                    <div class="header__location">
+                        <img src="./assets/images/purplelocation.svg" alt="Местоположение" />
+                        Москва, ул. Тверская, 15
+                    </div>
+                </div>
+                <button class="header__cta-button">Вызвать врача</button>
+                <div class="header_mobile-buttons">
+                    <button class="menu__toggle" id="menuToggle">
+                        <div class="header__mobile-icon" style="padding: 0;">
+                            <img src="./assets/images/purpleburger.svg" alt="Меню" />
+                        </div>
+                    </button>
+                    <div class="header__mobile-icon">
+                        <img src="./assets/images/purplephone.svg" alt="Телефон" />
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="header__nav-container">
+            <nav class="header__nav header__nav-wrapper">
+                <li class="header__nav-item"><a href="about.html" class="header__nav-link header__nav-link--active" data-dropdown-trigger="about">О нас</a></li>
+                <li class="header__nav-item"><a href="uslugiouter.html" class="header__nav-link" data-dropdown-trigger="uslugi">Услуги</a></li>
+                <li class="header__nav-item"><a href="prices.html" class="header__nav-link" data-dropdown-trigger="prices">Цены</a></li>
+                <li class="header__nav-item"><a href="vrachiouter.html" class="header__nav-link" data-dropdown-trigger="vrachi">Врачи</a></li>
+                <li class="header__nav-item"><a href="rev.html" class="header__nav-link" data-dropdown-trigger="reviews">Отзывы</a></li>
+                <li class="header__nav-item"><a href="faq.html" class="header__nav-link" data-dropdown-trigger="faq">Вопросы</a></li>
+            </nav>
+            <a href="tel:+74951234567" class="header__phone-desktop">
+                <img src="./assets/images/phone.svg" alt="Телефон" />
+                +7 (495) 123-45-67
+            </a>
+            </div>
+            <div class="header__dropdown" id="headerDropdown">
+                <div class="header__dropdown-panel" data-dropdown-panel="uslugi">
+                    <div class="header__dropdown-inner">
+                        <div class="header__dropdown-left">
+                            <a href="uslugiouter.html" class="header__dropdown-cat header__dropdown-cat--active" data-dropdown-cat="alkogolizm">Алкоголизм<span class="header__dropdown-cat-arrow"><svg width="12" height="12" viewBox="0 0 8 12" fill="none"><path d="M1 1L6 6L1 11" stroke="currentColor" stroke-width="2"/></svg></span></a>
+                            <a href="uslugiouter.html" class="header__dropdown-cat" data-dropdown-cat="kodirovanie">Кодирование<span class="header__dropdown-cat-arrow"><svg width="12" height="12" viewBox="0 0 8 12" fill="none"><path d="M1 1L6 6L1 11" stroke="currentColor" stroke-width="2"/></svg></span></a>
+                            <a href="uslugiouter.html" class="header__dropdown-cat" data-dropdown-cat="narkomaniya">Наркомания<span class="header__dropdown-cat-arrow"><svg width="12" height="12" viewBox="0 0 8 12" fill="none"><path d="M1 1L6 6L1 11" stroke="currentColor" stroke-width="2"/></svg></span></a>
+                            <a href="uslugiouter.html" class="header__dropdown-cat" data-dropdown-cat="nadomu">На дому<span class="header__dropdown-cat-arrow"><svg width="12" height="12" viewBox="0 0 8 12" fill="none"><path d="M1 1L6 6L1 11" stroke="currentColor" stroke-width="2"/></svg></span></a>
+                        </div>
+                        <div class="header__dropdown-right">
+                            <div class="header__dropdown-services" data-dropdown-services="alkogolizm">
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 6 000 ₽</span><span class="header__dropdown-card-name">Вывод из запоя</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card header__dropdown-card--highlight"><span class="header__dropdown-card-price">от 6 000 ₽</span><span class="header__dropdown-card-name">Длинный текст<br>в две строки</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 6 000 ₽</span><span class="header__dropdown-card-name">Вывод из запоя</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 6 000 ₽</span><span class="header__dropdown-card-name">Вывод из запоя</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 6 000 ₽</span><span class="header__dropdown-card-name">Вывод из запоя</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 6 000 ₽</span><span class="header__dropdown-card-name">Вывод из запоя</span></a>
+                            </div>
+                            <div class="header__dropdown-services" data-dropdown-services="kodirovanie">
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 8 000 ₽</span><span class="header__dropdown-card-name">Медикаментозное кодирование</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 10 000 ₽</span><span class="header__dropdown-card-name">Гипноз</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 7 000 ₽</span><span class="header__dropdown-card-name">Эспераль</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 9 000 ₽</span><span class="header__dropdown-card-name">Двойной блок</span></a>
+                            </div>
+                            <div class="header__dropdown-services" data-dropdown-services="narkomaniya">
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 12 000 ₽</span><span class="header__dropdown-card-name">Детоксикация</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 15 000 ₽</span><span class="header__dropdown-card-name">Снятие ломки</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 18 000 ₽</span><span class="header__dropdown-card-name">УБОД</span></a>
+                            </div>
+                            <div class="header__dropdown-services" data-dropdown-services="nadomu">
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 6 000 ₽</span><span class="header__dropdown-card-name">Вызов врача на дом</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 8 000 ₽</span><span class="header__dropdown-card-name">Капельница на дому</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 7 000 ₽</span><span class="header__dropdown-card-name">Консультация на дому</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__dropdown-panel" data-dropdown-panel="about">
+                    <div class="header__dropdown-simple">
+                        <a href="about.html#mission">Миссия</a>
+                        <a href="about.html#team">Команда</a>
+                        <a href="about.html#licenses">Лицензии</a>
+                        <a href="about.html">Вся информация</a>
+                    </div>
+                </div>
+                <div class="header__dropdown-panel" data-dropdown-panel="prices">
+                    <div class="header__dropdown-simple">
+                        <a href="prices.html">Прайс-лист</a>
+                        <a href="prices.html#vyvod">Вывод из запоя</a>
+                        <a href="prices.html#kodirovanie">Кодирование</a>
+                        <a href="calc.html">Калькулятор стоимости</a>
+                    </div>
+                </div>
+                <div class="header__dropdown-panel" data-dropdown-panel="vrachi">
+                    <div class="header__dropdown-simple">
+                        <a href="vrachiouter.html">Все врачи</a>
+                        <a href="vrachiinner.html">Наркологи</a>
+                        <a href="vrachiinner.html">Психотерапевты</a>
+                    </div>
+                </div>
+                <div class="header__dropdown-panel" data-dropdown-panel="reviews">
+                    <div class="header__dropdown-simple">
+                        <a href="rev.html">Все отзывы</a>
+                        <a href="rev.html">Видеоотзывы</a>
+                    </div>
+                </div>
+                <div class="header__dropdown-panel" data-dropdown-panel="faq">
+                    <div class="header__dropdown-simple">
+                        <a href="faq.html">Частые вопросы</a>
+                        <a href="contacts.html">Контакты</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="header__nav--mobile" id="mobileMenu">
+            <button class="menu__close" id="menuClose">
+                <img src="./assets/images/cross.svg" alt="Закрыть" />
+            </button>
+            <a href="#" class="header__nav-link--mobile">О нас</a>
+            <a href="uslugiouter.html" class="header__nav-link--mobile">Услуги</a>
+            <a href="#" class="header__nav-link--mobile">Цены</a>
+            <a href="#" class="header__nav-link--mobile">Врачи</a>
+            <a href="#" class="header__nav-link--mobile">Отзывы</a>
+            <a href="#" class="header__nav-link--mobile">Вопросы</a>
+            <div class="header__location-mobile">
+                <img src="./assets/images/location.svg" alt="Местоположение" />
+                Москва, ул. Тверская, 15
+            </div>
+            <a href="tel:+74951234567" class="header__phone-mobile">
+                <img src="./assets/images/phone.svg" alt="Телефон" />
+                +7 (495) 123-45-67
+            </a>
+            <button class="header__cta-button-mobile">Вызвать врача</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="service-hero">
+            <div class="service-hero__inner">
+            <div class="service-hero__content">
+                <div class="service-hero__breadcrumb">
+                    <p class="breadcrumb-first"><a href="index.html">Главная</a> | &nbsp;</p> <a href="uslugiouter.html">Услуги</a>
+                </div>
+                <h1 class="service-hero__title">О выездной наркологии</h1>
+                <p class="service-hero__desc">
+                  Выездная наркология – это современный центр лечения алкогольной зависимости, где мы подбираем максимально эффективный метод кодирования для каждого пациента.
+                </p>
+                <div class="service-hero__cta-row">
+                    <button class="service-hero__cta-btn">Вызвать врача</button>
+                </div>
+            </div>
+            <div class="service-hero__image">
+                <img src="./assets/images/emergency.png" alt="Врач скорой помощи" />
+            </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+      <div class="about">
+          <img src="./assets/images/v46_10.png" alt="" class="about__bg" />
+
+          <div class="about__content" style="display: flex; flex-direction: row; ">
+
+
+              <div class="about__header" style="margin-right: 0px;">
+                  <span class="about__title">{ О нас }</span>
+              </div>
+
+              <div class="about__text-block" style="width: 70%; position: relative; left: calc(50% - 35%);">
+                  <h2 class="about__subtitle">Выездная Наркология —</h2>
+
+                  <div class="about__paragraphs">
+                      <p class="about__paragraph">
+                          Это профессиональный медицинский центр, специализирующийся на оказании анонимной помощи при
+                          алкогольной и наркотической зависимости. Мы работаем в Москве и Московской области с 2010
+                          года, сочетая передовые методики лечения с глубоким уважением к каждому пациенту.
+                      </p>
+                      <p class="about__paragraph">
+                          Наша миссия — не просто снять острые симптомы, а помочь человеку восстановиться физически и
+                          психологически, вернуться к полноценной жизни без зависимости. Мы понимаем, как трудно
+                          сделать первый шаг. Поэтому работаем без осуждения, без постановки на учёт и всегда в
+                          строгом соответствии с врачебной тайной.
+                      </p>
+                      <p class="about__paragraph">
+                          Каждый вызов — это не просто процедура, а индивидуальный план помощи, разработанный опытным
+                          врачом после личного осмотра. Мы не применяем «универсальные схемы» — только
+                          персонализированный подход.
+                      </p>
+                  </div>
+
+                  <div class="about__quote">
+                      <div class="about__quote-line"></div>
+                      <blockquote class="about__quote-text">«Ваша боль — наша работа. Ваша тайна — наша честь.»</blockquote>
+                  </div>
+              </div>
+
+
+
+          </div>
+      </div>
+
+
+
+
+
+
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+const isMobile = window.innerWidth <= 768;
+
+// === Инициализация Swiper для doctors__slider ===
+function initDoctorsSwiper() {
+  const sliderContainer = document.querySelector('.doctors__slider');
+
+  const cards = Array.from(sliderContainer.querySelectorAll('.doctors__card'));
+  // Инициализация Swiper
+  new Swiper(sliderContainer, {
+    spaceBetween: 16,
+    slidesPerView: 1,
+    pagination: {
+      el: '.doctors__pagination',
+      type: 'fraction',
+      renderFraction: (currentClass, totalClass) => {
+        return `{ <span class="${currentClass}"></span> / <span class="${totalClass}">${cards.length}</span> }`;
+      }
+    },
+    navigation: {
+      prevEl: '.doctors__nav-prev',
+      nextEl: '.doctors__nav-next',
+    },
+    breakpoints: {
+      1300: {
+          slidesPerView: 4,
+          spaceBetween: 20
+      },
+      1090: {
+          slidesPerView: 3,
+          spaceBetween: 20
+      },
+      750: {
+          slidesPerView: 2
+      },
+      400: {
+          slidesPerView: 1.2
+      },
+      320: {
+          slidesPerView: 1.2
+      }
+    }
+  });
+}
+
+
+function initInfocardsSwiper() {
+  const list = document.querySelector('.infocards-grid');
+  list.classList.add('swiper', 'services__list--mobile');
+
+      const cards = Array.from(list.querySelectorAll('.infocard'));
+  if (cards.length === 0) return;
+
+  const wrapper = document.createElement('div');
+  wrapper.className = 'swiper-wrapper';
+
+  cards.forEach(card => {
+    card.classList.add('swiper-slide');
+    card.removeAttribute('style');
+    wrapper.appendChild(card);
+  });
+
+  list.prepend(wrapper);
+
+  // Инициализация Swiper
+  new Swiper(list, {
+    spaceBetween: 16,
+    slidesPerView: 1,
+    pagination: {
+      el: '.infocards__pagination',
+      type: 'fraction',
+      renderFraction: (currentClass, totalClass) => {
+        return `{ <span class="${currentClass}"></span> / <span class="${totalClass}">${cards.length}</span> }`;
+      }
+    },
+    navigation: {
+    
+      nextEl: '.infocards__arrow-next',
+    },
+    breakpoints: {
+      1300: {
+          slidesPerView: 4,
+          spaceBetween: 20
+      },
+      1090: {
+        
+          slidesPerView: 3,
+          spaceBetween: 20
+      },
+      750: {
+          slidesPerView: 2
+      },
+      400: {
+          slidesPerView: 1.2
+      },
+      320: {
+          slidesPerView: 1.2
+      }
+    }
+  });
+}
+
+
+
+function initTreatmentSwiper() {
+    const list = document.querySelector('.treatment-options__cards');
+  list.classList.add('swiper', 'services__list--mobile');
+
+      const cards = Array.from(list.querySelectorAll('.treatment-card'));
+  if (cards.length === 0) return;
+
+  const wrapper = document.createElement('div');
+  wrapper.className = 'swiper-wrapper';
+
+  cards.forEach(card => {
+    card.classList.add('swiper-slide');
+    card.removeAttribute('style');
+    wrapper.appendChild(card);
+  });
+
+  list.prepend(wrapper);
+
+  // Инициализация Swiper
+  new Swiper(list, {
+    spaceBetween: 16,
+    slidesPerView: 1,
+    pagination: {
+      el: '.treatment__pagination',
+      type: 'fraction',
+      renderFraction: (currentClass, totalClass) => {
+        return `{ <span class="${currentClass}"></span> / <span class="${totalClass}">${cards.length}</span> }`;
+      }
+    },
+    navigation: {
+    
+      nextEl: '.treatment__arrow-next',
+    },
+    breakpoints: {
+      1300: {
+          slidesPerView: 4,
+          spaceBetween: 20
+      },
+      1090: {
+        
+          slidesPerView: 3,
+          spaceBetween: 20
+      },
+      750: {
+          slidesPerView: 2
+      },
+      400: {
+          slidesPerView: 1.2
+      },
+      320: {
+          slidesPerView: 1.2
+      }
+    }
+  });
+}
+
+
+
+
+
+function initInterSwiper() {
+    const list = document.querySelector('.inter__stat');
+  list.classList.add('swiper');
+
+      const cards = Array.from(list.querySelectorAll('.inter__stat-item'));
+
+ 
+  if (cards.length === 0) return;
+
+  const wrapper = document.createElement('div');
+  wrapper.className = 'swiper-wrapper';
+
+  cards.forEach(card => {
+    card.classList.add('swiper-slide');
+    // card.removeAttribute('style');
+    wrapper.appendChild(card);
+  });
+
+  list.prepend(wrapper);
+
+  // Инициализация Swiper
+  new Swiper(list, {
+    spaceBetween: 16,
+    slidesPerView: 1,
+    pagination: {
+      el: '.inter__pagination',
+      type: 'fraction',
+      renderFraction: (currentClass, totalClass) => {
+        return `{ <span class="${currentClass}"></span> / <span class="${totalClass}">${cards.length}</span> }`;
+      }
+    },
+    navigation: {
+    
+      nextEl: '.inter__arrow-next',
+    },
+    breakpoints: {
+      1300: {
+          slidesPerView: 3,
+          spaceBetween: 20
+      },
+      1090: {
+        
+          slidesPerView: 3,
+          spaceBetween: 20
+      },
+      750: {
+          slidesPerView: 2
+      },
+      400: {
+          slidesPerView: 1.2
+      },
+      320: {
+          slidesPerView: 1.2
+      }
+    }
+  });
+}
+
+
+function initLicensesSwiper() {
+    const list = document.querySelector('.licenses-slider__container');
+  list.classList.add('swiper', 'services__list--mobile');
+
+      const cards = Array.from(list.querySelectorAll('.license-card'));
+  if (cards.length === 0) return;
+
+  const wrapper = document.createElement('div');
+  wrapper.className = 'swiper-wrapper';
+
+  cards.forEach(card => {
+    card.classList.add('swiper-slide');
+    card.removeAttribute('style');
+    wrapper.appendChild(card);
+  });
+
+  list.prepend(wrapper);
+
+  // Инициализация Swiper
+  new Swiper(list, {
+    spaceBetween: 16,
+    slidesPerView: 1,
+    pagination: {
+      el: '.licenses__pagination',
+      type: 'fraction',
+      renderFraction: (currentClass, totalClass) => {
+        return `{ <span class="${currentClass}"></span> / <span class="${totalClass}">${cards.length}</span> }`;
+      }
+    },
+    navigation: {
+      prevEl: '.licenses__nav-prev',
+      nextEl: '.licenses__nav-next',
+    },
+    breakpoints: {
+      1300: {
+          slidesPerView: 4,
+          spaceBetween: 20
+      },
+      1090: {
+        
+          slidesPerView: 3,
+          spaceBetween: 20
+      },
+      750: {
+          slidesPerView: 2
+      },
+      400: {
+          slidesPerView: 1.2
+      },
+      320: {
+          slidesPerView: 1.2
+      }
+    }
+  });
+}
+
+function initReviewsSwiper() {
+    const list = document.querySelector('.reviews__slider-wrapper');
+ 
+
+      const cards = Array.from(list.querySelectorAll('.reviews__item'));
+  if (cards.length === 0) return;
+
+  const wrapper = document.createElement('div');
+  wrapper.className = 'swiper-wrapper';
+
+  cards.forEach(card => {
+    card.classList.add('swiper-slide');
+    card.removeAttribute('style');
+    wrapper.appendChild(card);
+  });
+
+  list.prepend(wrapper);
+
+  // Инициализация Swiper
+  new Swiper(list, {
+    spaceBetween: 16,
+    slidesPerView: 1,
+    pagination: {
+      el: '.reviews__pagination',
+      type: 'fraction',
+      renderFraction: (currentClass, totalClass) => {
+        return `{ <span class="${currentClass}"></span> / <span class="${totalClass}">${cards.length}</span> }`;
+      }
+    },
+    navigation: {
+      prevEl: '.reviews__nav-prev',
+      nextEl: '.reviews__nav-next',
+    },
+    breakpoints: {
+      1300: {
+          slidesPerView: 4,
+          spaceBetween: 20
+      },
+      1090: {
+        
+          slidesPerView: 3,
+          spaceBetween: 20
+      },
+      750: {
+          slidesPerView: 2
+      },
+      400: {
+          slidesPerView: 1.2
+      },
+      320: {
+          slidesPerView: 1.2
+      }
+    }
+  });
+}
+
+
+
+
+function initServicesSwiper() {
+  const list = document.querySelector('.services__list');
+  if (!list || list.classList.contains('swiper')) return;
+
+  list.classList.add('swiper', 'services__list--mobile');
+
+  const cards = Array.from(list.querySelectorAll('.service-card'));
+  if (cards.length === 0) return;
+
+  const wrapper = document.createElement('div');
+  wrapper.className = 'swiper-wrapper';
+
+  cards.forEach(card => {
+    card.classList.add('swiper-slide');
+    card.removeAttribute('style');
+    wrapper.appendChild(card);
+  });
+
+  list.prepend(wrapper);
+
+
+
+  new Swiper(list, {
+    spaceBetween: 16,
+    pagination: {
+      el: '.services__pagination',
+      type: 'fraction',
+      renderFraction: (currentClass, totalClass) => {
+        return `{ <span class="${currentClass}">1</span> / <span class="${totalClass}">${cards.length}</span> }`;
+      }
+    },
+    navigation: {
+      nextEl: '.services__arrow-next',
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      580: {
+        slidesPerView: 2,
+      }
+    }
+  });
+}
+
+// === Инициализация Swiper для call-process__steps ===
+function initCallProcessSwiper() {
+  const stepsContainer = document.querySelector('.call-process__steps');
+  if (!stepsContainer || stepsContainer.classList.contains('swiper')) return;
+
+  stepsContainer.classList.add('swiper', 'call-process__steps--mobile');
+
+  const steps = Array.from(stepsContainer.querySelectorAll('.call-step'));
+  if (steps.length === 0) return;
+
+  const wrapper = document.createElement('div');
+  wrapper.className = 'swiper-wrapper';
+
+  steps.forEach(step => {
+    step.classList.add('swiper-slide');
+    step.removeAttribute('style');
+    wrapper.appendChild(step);
+  });
+
+  stepsContainer.prepend(wrapper);
+
+
+
+  new Swiper(stepsContainer, {
+    spaceBetween: 24,
+    slidesPerView: 1,
+    pagination: {
+      el: '.call-process__pagination',
+      type: 'fraction',
+      renderFraction: (currentClass, totalClass) => {
+        return `{ <span class="${currentClass}"></span> / <span class="${totalClass}">${steps.length}</span> }`;
+      }
+    },
+    navigation: {
+      nextEl: '.call-process__arrow-next',
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      580: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 1,
+        spaceBetween: 24,
+      }
+    }
+  });
+}
+
+
+
+
+function initfeaturesProcessSwiper() {
+  const stepsContainer = document.querySelector('.features-process__steps');
+  if (!stepsContainer || stepsContainer.classList.contains('swiper')) return;
+
+  stepsContainer.classList.add('swiper', 'features-process__steps--mobile');
+
+  const steps = Array.from(stepsContainer.querySelectorAll('.features-step'));
+  if (steps.length === 0) return;
+
+  const wrapper = document.createElement('div');
+  wrapper.className = 'swiper-wrapper';
+
+  steps.forEach(step => {
+    step.classList.add('swiper-slide');
+    step.removeAttribute('style');
+    wrapper.appendChild(step);
+  });
+
+  stepsContainer.prepend(wrapper);
+
+
+  new Swiper(stepsContainer, {
+    spaceBetween: 24,
+    slidesPerView: 1,
+    pagination: {
+      el: '.features-process__pagination',
+      type: 'fraction',
+      renderFraction: (currentClass, totalClass) => {
+        return `{ <span class="${currentClass}"></span> / <span class="${totalClass}">${steps.length}</span> }`;
+      }
+    },
+    navigation: {
+      nextEl: '.features-process__arrow-next',
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      580: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 1,
+        spaceBetween: 24,
+      }
+    }
+  });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// === Запуск инициализации только на мобильных устройствах ===
+if (isMobile) {
+  initServicesSwiper();
+  initCallProcessSwiper();
+initInfocardsSwiper();
+// initTreatmentSwiper();
+// initInterSwiper();
+
+   initfeaturesProcessSwiper();
+}
+  initDoctorsSwiper();
+   initLicensesSwiper();
+   initReviewsSwiper();
+
+
+// === Обработка изменения размера окна ===
+let resizeTimer;
+window.addEventListener('resize', function () {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    const isNowMobile = window.innerWidth <= 768;
+    if (isNowMobile) {
+      initServicesSwiper();
+      initCallProcessSwiper();
+      initDoctorsSwiper();
+      initInfocardsSwiper();
+      initTreatmentSwiper();
+      initInterSwiper();
+      initfeaturesProcessSwiper();
+ 
+    }
+  }, 250); // debounce
+});
+});
+</script>
+
+      
+<section class="doctors">
+<div class="doctors__header">
+  <a href="#" class="doctors__link">Все специалисты →</a>
+  <h2 class="doctors__title">Доверьтесь экспертам</h2>
+</div>
+
+<p class="doctors__description">
+  В нашей команде работают только опытные специалисты с высшим медицинским образованием и многолетним
+  стажем работы в наркологии. Все врачи имеют действующие сертификаты и регулярно проходят повышение
+  квалификации.
+</p>
+
+
+<div class="doctors__slider swiper">
+
+  <div class="doctors__slider-wrapper swiper-wrapper">
+
+    <div class="doctors__card doctors__card--highlighted swiper-slide">
+      <a href="./assets/images/vrach1.png" data-fancybox="doctors" data-caption="Дмитрий Иванов, врач-нарколог высшей категории">
+        <div class="doctors__card-image-wrapper">
+          <img src="./assets/images/vrach1.png" alt="Дмитрий Иванов" class="doctors__card-image">
+          <span class="doctors__experience">Стаж работы: 15 лет</span>
+        </div>
+      </a>
+      <div class="doctors__card-info">
+        <h3 class="doctors__name">Дмитрий Иванов</h3>
+        <p class="doctors__specialty">Врач-нарколог высшей категории</p>
+      </div>
+    </div>
+
+
+    <div class="doctors__card swiper-slide">
+      <a href="./assets/images/vrach2.png" data-fancybox="doctors" data-caption="Анна Смирнова, психиатр-нарколог">
+        <div class="doctors__card-image-wrapper">
+          <img src="./assets/images/vrach2.png" alt="Анна Смирнова" class="doctors__card-image">
+          <span class="doctors__experience">Стаж работы: 12 лет</span>
+        </div>
+      </a>
+      <div class="doctors__card-info">
+        <h3 class="doctors__name">Анна Смирнова</h3>
+        <p class="doctors__specialty">Психиатр-нарколог</p>
+      </div>
+    </div>
+
+
+    <div class="doctors__card swiper-slide">
+      <a href="./assets/images/vrach3.png" data-fancybox="doctors" data-caption="Михаил Петров, врач-психотерапевт">
+        <div class="doctors__card-image-wrapper">
+          <img src="./assets/images/vrach3.png" alt="Михаил Петров" class="doctors__card-image">
+          <span class="doctors__experience">Стаж работы: 10 лет</span>
+        </div>
+      </a>
+      <div class="doctors__card-info">
+        <h3 class="doctors__name">Михаил Петров</h3>
+        <p class="doctors__specialty">Врач-психотерапевт</p>
+      </div>
+    </div>
+
+
+    <div class="doctors__card swiper-slide">
+      <a href="./assets/images/vrach4.png" data-fancybox="doctors" data-caption="Екатерина Козлова, невролог, рефлексотерапевт">
+        <div class="doctors__card-image-wrapper">
+          <img src="./assets/images/vrach4.png" alt="Екатерина Козлова" class="doctors__card-image">
+          <span class="doctors__experience">Стаж работы: 8 лет</span>
+        </div>
+      </a>
+      <div class="doctors__card-info">
+        <h3 class="doctors__name">Екатерина Козлова</h3>
+        <p class="doctors__specialty">Невролог, рефлексотерапевт</p>
+      </div>
+    </div>
+
+          <div class="doctors__card swiper-slide">
+      <a href="./assets/images/vrach4.png" data-fancybox="doctors" data-caption="Екатерина Гальцева, невролог, рефлексотерапевт">
+        <div class="doctors__card-image-wrapper">
+          <img src="./assets/images/vrach4.png" alt="Екатерина Гальцева" class="doctors__card-image">
+          <span class="doctors__experience">Стаж работы: 8 лет</span>
+        </div>
+      </a>
+      <div class="doctors__card-info">
+        <h3 class="doctors__name">Екатерина Гальцева</h3>
+        <p class="doctors__specialty">Невролог, рефлексотерапевт</p>
+      </div>
+    </div>
+
+
+
+
+ 
+
+  </div>
+
+
+
+
+
+</div>
+
+
+<div class="slider__mobile_show">
+<div class="doctors__pagination"></div>
+
+
+
+   <button class="doctors__nav doctors__nav-prev swiper-button-prev" type="button">
+    
+    <img src="./assets/images/arrow.svg" alt="Назад">
+  </button>
+  <button class="doctors__nav doctors__nav-next swiper-button-next" type="button">
+
+
+
+    <picture class="next-button__icon">
+<source media="(max-width: 767px)" style="transform: rotate(180deg);" srcset="./assets/images/arrow-long.svg">
+    <img src="./assets/images/arrow.svg" alt="Вперед"  class="next_arrow">
+</picture>
+  </button>
+</div>
+
+
+</section>
+
+
+
+
+<div style="background: rgba(249, 248, 255, 1);">
+      <div class="container">
+          <!-- Блок о выезде врача -->
+          <section class="doctor-block">
+              <h1 class="doctor-block__title">Выездной нарколог</h1>
+              <p class="doctor-block__subtitle">
+                  Когда кажется, что выхода нет — выход есть. Просто позвоните. Мы поможем без осуждения, анонимно и
+                  уже через 37 минут.
+              </p>
+          </section>
+
+         
+          <div class="infocards-grid">
+
+              <div class="infocard">
+                  <img src="./assets/images/ad11.svg" alt="Иконка" class="infocard__icon">
+                  <h3 class="infocard__title">Запой 3 дня. Стыдно звонить</h3>
+                  <p class="infocard__text">Оставляете заявку на сайте или звоните по телефону. Консультант уточняет
+                      детали.</p>
+              </div>
+
+
+              <div class="infocard">
+                  <img src="./assets/images/people.svg" alt="Иконка" class="infocard__icon">
+                  <h3 class="infocard__title">Родители в панике: сын не приходит в себя</h3>
+                  <p class="infocard__text">Врач приедет, стабилизирует состояние и даст чёткие рекомендации.</p>
+              </div>
+
+
+              <div class="infocard">
+                  <img src="./assets/images/ad12.svg" alt="Иконка" class="infocard__icon">
+                  <h3 class="infocard__title">После «ночной тусовки» — рвота, тремор, страх смерти</h3>
+                  <p class="infocard__text">Это не «похмелье», это интоксикация. Мы справимся — дома, без больницы.
+                  </p>
+              </div>
+
+
+              <div class="infocard">
+                  <img src="./assets/images/ad13.svg" alt="Иконка" class="infocard__icon">
+                  <h3 class="infocard__title">Утром совещание, а вы не в состоянии встать</h3>
+                  <p class="infocard__text">Мы вернём вас к жизни до начала рабочего дня. Анонимно.</p>
+              </div>
+
+
+              <div class="infocard">
+                  <img src="./assets/images/ad14.svg" alt="Иконка" class="infocard__icon">
+                  <h3 class="infocard__title">Бабушка перепутала таблетки после ссоры с дочерью</h3>
+                  <p class="infocard__text">Пожилые — особенно уязвимы. Мы приедем быстро, бережно и с уважением к
+                      возрасту.</p>
+              </div>
+
+
+              <div class="infocard">
+                  <img src="./assets/images/info.svg" alt="Иконка" class="infocard__icon">
+                  <h3 class="infocard__title">После запоя — галлюцинации и агрессия</h3>
+                  <p class="infocard__text">Это не «просто похмелье» — это делирий (белая горячка). Требуется срочная
+                      помощь. Мы знаем, как действовать.</p>
+              </div>
+          </div>
+
+          
+
+          <div class="slider__mobile">
+            <div class="swiper-pagination infocards__pagination swiper-pagination-fraction swiper-pagination-horizontal">
+              { <span class="swiper-pagination-current">1</span> / <span class="swiper-pagination-total">4</span> }</div>
+          
+          
+          
+            <button class="swiper-button-next infocards__nav infocards__arrow-next" type="button">
+          
+          
+          
+              <picture class="next-button__icon">
+                <source media="(max-width: 767px)" srcset="./assets/images/arrow-long.svg">
+                <img src="./assets/images/arrow.svg" alt="Вперед" class="next_arrow">
+              </picture>
+            </button>
+          
+          </div>
+
+
+          <!-- Что привозит врач -->
+          <section class="doctor-brings">
+              <img src="./assets/images/case.png" alt="Аптечка с лекарствами" class="doctor-brings__image">
+              <div class="doctor-brings__content">
+                  <h2 class="doctor-brings__title">Что привозит врач?</h2>
+                  <div class="doctor-brings__items">
+                      <div class="doctor-brings__item">
+                          <img src="./assets/images/ad9.svg" alt="Иконка" class="doctor-brings__item-icon">
+                          <span class="doctor-brings__item-text">Портативный ЭКГ (при необходимости)</span>
+                      </div>
+                      <div class="doctor-brings__item">
+                          <img src="./assets/images/ad7.svg" alt="Иконка" class="doctor-brings__item-icon">
+                          <span class="doctor-brings__item-text">Капельницы (инфузионные системы)</span>
+                      </div>
+                      <div class="doctor-brings__item">
+                          <img src="./assets/images/ad8.svg" alt="Иконка" class="doctor-brings__item-icon">
+                          <span class="doctor-brings__item-text">Пульсоксиметр и тонометр</span>
+                      </div>
+                      <div class="doctor-brings__item">
+                          <img src="./assets/images/ad6.svg" alt="Иконка" class="doctor-brings__item-icon">
+                          <span class="doctor-brings__item-text">Сертифицированные детокс-препараты</span>
+                      </div>
+                      <div class="doctor-brings__item">
+                          <img src="./assets/images/ad10.svg" alt="Иконка" class="doctor-brings__item-icon">
+                          <span class="doctor-brings__item-text">Бланк анонимного отчёта</span>
+                      </div>
+                  </div>
+              </div>
+              <img src="./assets/images/case-mob.png" alt="Аптечка с лекарствами" class="doctor-brings__image--mobile">
+          </section>
+
+          <!-- Цитата -->
+          <blockquote class="quote">
+              «Мы не судим. Мы лечим. Ваша боль — наша работа. Ваша тайна — наша честь.»
+          </blockquote>
+      </div>
+</div>
+
+
+      <div class="licenses-block">
+          <div class="licenses-block__header">
+              <a href="#" class="licenses-block__link">Все лицензии <img src="./assets/images/bow-arrow.svg" alt="стрела лука" style="margin-left: 5px;"></a>
+              <div>
+                  <h1 class="licenses-block__title">Лицензии и документы</h1>
+                  <p class="licenses-block__subtitle">Все наши специалисты и клиника имеют полный пакет разрешительной
+                      документации.</p>
+              </div>
+          </div>
+
+          <div class="licenses-slider" style="overflow: visible;">
+
+              <div class="licenses-slider__container" id="sliderContainer">
+                  <div class="license-card">
+                      <img src="./assets/images/license.png" alt="Лицензия" class="license-card__image">
+                      <div class="license-card__content">
+                          <div class="license-card__title">Название лицензии</div>
+
+                          <div class="license-card__icon">
+                              <img width="20" height="20" src="./assets/images/search.svg" alt="Поиск">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="license-card">
+                      <img src="./assets/images/license.png" alt="Лицензия" class="license-card__image">
+                      <div class="license-card__content">
+                          <div class="license-card__title">Название лицензии в две строки</div>
+
+                          <div class="license-card__icon">
+                              <img width="20" height="20" src="./assets/images/search.svg" alt="Поиск">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="license-card">
+                      <img src="./assets/images/license.png" alt="Лицензия" class="license-card__image">
+                      <div class="license-card__content">
+                          <div class="license-card__title">Большое название лицензии в три строки</div>
+
+                          <div class="license-card__icon">
+                              <img width="20" height="20" src="./assets/images/search.svg" alt="Поиск">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="license-card">
+                      <img src="./assets/images/license.png" alt="Лицензия" class="license-card__image">
+                      <div class="license-card__content">
+                          <div class="license-card__title">Название лицензии</div>
+
+                          <div class="license-card__icon">
+                              <img width="20" height="20" src="./assets/images/search.svg" alt="Поиск">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="license-card">
+                      <img src="./assets/images/license.png" alt="Лицензия" class="license-card__image">
+                      <div class="license-card__content">
+                          <div class="license-card__title">Еще одна лицензия</div>
+
+                          <div class="license-card__icon">
+                              <img width="20" height="20" src="./assets/images/search.svg" alt="Поиск">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+
+          </div>
+
+
+
+
+
+
+                          <div class="slider__mobile_show">
+<div class="licenses__pagination"></div>
+
+
+
+   <button class="licenses__nav licenses__nav-prev swiper-button-prev" type="button">
+    
+    <img src="./assets/images/arrow.svg" alt="Назад">
+  </button>
+  <button class="licenses__nav licenses__nav-next swiper-button-next" type="button">
+
+
+
+    <picture class="next-button__icon">
+<source media="(max-width: 767px)" style="transform: rotate(180deg);" srcset="./assets/images/arrow-long.svg">
+    <img src="./assets/images/arrow.svg" alt="Вперед"  class="next_arrow">
+</picture>
+  </button>
+</div>
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+<section class="reviews">
+  <div class="reviews__header">
+    <h2 class="reviews__title">Отзывы наших пациентов</h2>
+    <p class="reviews__subtitle">Реальные отзывы людей, которым мы помогли. Имена изменены для сохранения анонимности.</p>
+  </div>
+
+  <div class="reviews__slider swiper">
+
+
+    <div class="reviews__slider-wrapper">
+      <div class="reviews__item">
+        <div class="reviews__item-header">
+          <h3 class="reviews__item-name">Александр, 34 года</h3>
+        </div>
+        <div class="reviews__item-text">
+          Врач приехал через 40 минут после вызова. Состояние было критическое, но через 2 часа я почувствовал себя нормально. Все анонимно, без лишних вопросов. Очень благодарен за профессионализм!
+        </div>
+        <div class="reviews__item-footer">
+          <div class="reviews__rating">
+            <img src="./assets/images/star.svg" alt="Звезда">
+            <img src="./assets/images/star.svg" alt="Звезда">
+            <img src="./assets/images/star.svg" alt="Звезда">
+            <img src="./assets/images/star.svg" alt="Звезда">
+            <img src="./assets/images/halfstar.svg" alt="Половина звезды">
+          </div>
+          <span class="reviews__date">15 ноября 2024</span>
+        </div>
+      </div>
+
+      <div class="reviews__item">
+        <div class="reviews__item-header">
+          <h3 class="reviews__item-name">Мария, 29 лет</h3>
+        </div>
+        <div class="reviews__item-text">
+          Вызвали для отца, который находился в запое 5 дней. Доктор Смирнова провела полную детоксикацию и дала рекомендации по дальнейшему лечению. Отец чувствует себя отлично, даже не верится!
+        </div>
+        <div class="reviews__item-footer">
+          <div class="reviews__rating">
+            <img src="./assets/images/star.svg" alt="Звезда">
+            <img src="./assets/images/star.svg" alt="Звезда">
+            <img src="./assets/images/star.svg" alt="Звезда">
+            <img src="./assets/images/star.svg" alt="Звезда">
+                          <img src="./assets/images/halfstar.svg" alt="Половина звезды">
+          </div>
+          <span class="reviews__date">28 октября 2024</span>
+        </div>
+      </div>
+
+      <div class="reviews__item">
+        <div class="reviews__item-header">
+          <h3 class="reviews__item-name">Дмитрий, 41 год</h3>
+        </div>
+        <div class="reviews__item-text">
+          Помогли мне после сильного отравления некачественным алкоголем. Врач сразу поставил капельницу, дал препараты. На следующий день я был полностью работоспособен. Цена адекватная за такой уровень сервиса.
+        </div>
+        <div class="reviews__item-footer">
+          <div class="reviews__rating">
+            <img src="./assets/images/star.svg" alt="Звезда">
+            <img src="./assets/images/star.svg" alt="Звезда">
+            <img src="./assets/images/star.svg" alt="Звезда">
+            <img src="./assets/images/star.svg" alt="Звезда">
+            <img src="./assets/images/halfstar.svg" alt="Половина звезды">
+          </div>
+          <span class="reviews__date">3 ноября 2024</span>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+  </div>
+                          
+  
+  
+  
+  <div class="slider__mobile_show">
+    <div class="reviews__pagination"></div>
+  
+  
+  
+    <button class="reviews__nav reviews__nav-prev swiper-button-prev" type="button">
+  
+      <img src="./assets/images/arrow.svg" alt="Назад">
+    </button>
+    <button class="reviews__nav reviews__nav-next swiper-button-next" type="button">
+  
+  
+  
+      <picture class="next-button__icon">
+        <source media="(max-width: 767px)" style="transform: rotate(180deg);" srcset="./assets/images/arrow-long.svg">
+        <img src="./assets/images/arrow.svg" alt="Вперед" class="next_arrow">
+      </picture>
+    </button>
+  </div>
+
+
+
+
+
+</section>
+
+
+      <div class="features-process">
+          <div class="features-process__header">
+              <h2 class="features-process__title">Почему выбирают нашу службу?</h2>
+              <p class="features-process__subtitle">Нас выбирают сотни москвичей каждый месяц — и не случайно. Вот что отличает нас от других служб:</p>
+          </div>
+
+          <div class="features-process__steps">
+              <div class="features-step">
+                  <div class="features-step__number"><img src="./assets/images/doctor.svg" alt="иконка доктора"></div>
+                  <div class="features-step__content">
+                      <h3 class="features-step__title">Только врачи высшей категории</h3>
+                      <p class="features-step__description">
+В нашей команде — только сертифицированные специалисты с многолетним стажем. Никаких фельдшеров или медсестёр без профильного образования.
+                      </p>
+                  </div>
+              </div>
+
+              <div class="features-step">
+                  <div class="features-step__number"><img src="./assets/images/chem.svg" alt="иконка колбы с лекарствами"></div>
+                  <div class="features-step__content">
+                      <h3 class="features-step__title">Оригинальные препараты</h3>
+                      <p class="features-step__description">
+Мы используем только лицензированные лекарства от проверенных производителей. Все серии и сроки годности фиксируются в акте.
+                      </p>
+                  </div>
+              </div>
+
+              <div class="features-step">
+                  <div class="features-step__number"><img src="./assets/images/law.svg" alt="иконка документов"></div>
+                  <div class="features-step__content">
+                      <h3 class="features-step__title">Юридическая защищённость</h3>
+                      <p class="features-step__description">Полный пакет документов: лицензия, договор, чек. Никаких «чёрных» схем. Мы работаем легально и несём ответственность за результат.</p>
+                  </div>
+              </div>
+
+              <div class="features-step">
+                  <div class="features-step__number"><img src="./assets/images/heart-solo.svg" alt="иконка сердца"></div>
+                  <div class="features-step__content">
+                      <h3 class="features-step__title">Человеческое отношение</h3>
+                      <p class="features-step__description">
+                          Мы не осуждаем. Мы помогаем. Каждый пациент — это человек в беде, а не «клиент» или «статистика».
+                      </p>
+                  </div>
+              </div>
+          </div>
+
+          
+                                                          <div class="slider__mobile">
+                <div class="swiper-pagination features-process__pagination swiper-pagination-fraction swiper-pagination-horizontal">
+                  { <span class="swiper-pagination-current">1</span> / <span class="swiper-pagination-total">4</span> }</div>
+              
+              
+              
+                <button class="swiper-button-next features-process__nav features-process__arrow-next" type="button">
+              
+              
+              
+                  <picture class="next-button__icon">
+                    <source media="(max-width: 767px)" srcset="./assets/images/arrow-long.svg">
+                    <img src="./assets/images/arrow.svg" alt="Вперед" class="next_arrow">
+                  </picture>
+                </button>
+              
+              </div>
+
+
+      </div>
+
+
+
+
+
+
+<div class="banner-second">
+<div class="banner-second__content">
+  <div class="banner-second__inner">
+    <div class="banner-second__stat-text">
+      <h2 class="hero__stat-value">Нужна помощь?<br> Звоните прямо сейчас!</h2>
+      <p>Круглосуточная служба вызова нарколога на дом в Москве.<br> Анонимно, профессионально, быстро.</p>
+    </div>
+    <div class="banner-second__image-wrap">
+      <img src="./assets/images/3doc.png" alt="Врачи" class="banner-second__image" />
+    </div>
+    <div class="banner-second__stat-actions">
+      <button type="submit" class="inter__button">
+        <img src="./assets/images/purplephone.svg" alt="иконка человека" />
+        Вызов врача
+      </button>
+      <p>Или оставьте заявку и мы перезвоним вам в течение 5 минут</p>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+  </main>
+    <footer class="footer">
+        <div class="footer__all">
+          <div class="footer__info">
+            <div class="footer__column">
+              <div class="footer__logo">
+                <img src="./assets/images/whitetruck.svg" alt="Логотип">
+                <span class="footer__logo-text">Выездная наркология</span>
+              </div>
+              <div class="footer__section">
+                <p>Круглосуточная служба вызова нарколога на дом в Москве. Профессиональная помощь при алкогольной и
+                  наркотической зависимости.</p>
+              </div>
+            </div>
+            <div class="footer__column">
+              <div class="footer__section">
+                <h3 class="footer__section-title">Услуги</h3>
+                <ul class="footer__section-list">
+                  <li><a href="#">Вывод из запоя</a></li>
+                  <li><a href="#">Кодирование от алкоголизма</a></li>
+                  <li><a href="#">Детоксикация</a></li>
+                  <li><a href="#">Психологическая помощь</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__column">
+              <div class="footer__section">
+                <h3 class="footer__section-title">Пациентам</h3>
+                <ul class="footer__section-list">
+                  <li><a href="#">Цены</a></li>
+                  <li><a href="#">Наши врачи</a></li>
+                  <li><a href="#">Отзывы</a></li>
+                  <li><a href="#">Частые вопросы</a></li>
+                  <li><a href="#">Лицензии и документы</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__column">
+              <div class="footer__search">
+                <input type="text" placeholder="Поиск">
+                <button type="submit">
+                  <img src="./assets/images/search.svg" style=" filter: brightness(0) invert(1);" alt="Поиск">
+                </button>
+              </div>
+              <div class="footer__section">
+                <h3 class="footer__section-title">Контакты</h3>
+                <ul class="footer__contacts-list">
+                  <li>
+                    <img src="./assets/images/phone.svg" alt="Телефон">
+                    <span>+7 (495) 123-45-67</span>
+                  </li>
+                  <li>
+                    <img src="./assets/images/calendar.svg" alt="Режим работы">
+                    <span>Круглосуточно 24/7</span>
+                  </li>
+                  <li>
+                    <img src="./assets/images/location.svg" alt="Адрес">
+                    <span>Москва, ул. Тверская, 15</span>
+                  </li>
+                  <li>
+                    <img src="./assets/images/email.svg" alt="Email">
+                    <span>info@vyezd-narkolog.ru</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer__copyright">
+            <p>© 2025 Выездная Наркология. Все права защищены. Лицензия № ЛО-77-01-012345</p>
+            <div class="footer__copyright-links">
+              <a href="#">Политика конфиденциальности</a>
+              <span>|</span>
+              <a href="#">Пользовательское соглашение</a>
+              <span>|</span>
+              <a href="#">Карта сайта</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+  
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const menuClose = document.getElementById('menuClose');
+        const mobileMenu = document.getElementById('mobileMenu');
+        if (menuToggle) menuToggle.addEventListener('click', () => mobileMenu.classList.add('active'));
+        if (menuClose) menuClose.addEventListener('click', () => mobileMenu.classList.remove('active'));
+
+        const header = document.getElementById('header');
+        const hero = document.querySelector('.service-hero');
+        if (header && hero) {
+            window.addEventListener('scroll', () => {
+                header.classList.toggle('header--light', window.scrollY > hero.offsetHeight / 2);
+            });
+        }
+
+        // Мобильное содержание: «Показать все»
+        const tocList = document.getElementById('tocList');
+        const tocShowAll = document.getElementById('tocShowAll');
+        const tocHide = document.getElementById('tocHide');
+        if (tocList && tocShowAll) {
+            tocShowAll.addEventListener('click', function(e) {
+                e.preventDefault();
+                tocList.classList.add('service-toc__list--expanded');
+            });
+        }
+        if (tocHide) tocHide.addEventListener('click', function(e) { e.preventDefault(); });
+
+        // Свайпер для «Варианты лечения» (мобильная версия)
+        function initVariantsSwiper() {
+            const list = document.querySelector('.variants-options__cards');
+            if (!list || list.classList.contains('swiper') || typeof Swiper === 'undefined') return;
+            const cards = Array.from(list.querySelectorAll('.variants-card'));
+            if (cards.length === 0) return;
+
+            list.classList.add('swiper', 'variants-options__cards--mobile');
+            const wrapper = document.createElement('div');
+            wrapper.className = 'swiper-wrapper';
+            cards.forEach(card => {
+                card.classList.add('swiper-slide');
+                wrapper.appendChild(card);
+            });
+            list.prepend(wrapper);
+
+            new Swiper(list, {
+                spaceBetween: 16,
+                slidesPerView: 1,
+                pagination: {
+                    el: '.variants-options .treatment__pagination',
+                    type: 'fraction',
+                    renderFraction: (currentClass, totalClass) => {
+                        return `{ <span class="${currentClass}"></span> / <span class="${totalClass}">${cards.length}</span> }`;
+                    }
+                },
+                navigation: {
+                    nextEl: '.variants-options .treatment__arrow-next'
+                },
+                breakpoints: {
+                    0: { slidesPerView: 1 },
+                    769: { slidesPerView: 3, spaceBetween: 20 }
+                }
+            });
+        }
+
+        // Свайпер для «Этапы вывода» (prices-card) — мобильная версия
+        function initPricesCardSwiper() {
+            const stepsContainer = document.querySelector('.prices-card__steps');
+            if (!stepsContainer || stepsContainer.classList.contains('swiper') || typeof Swiper === 'undefined') return;
+            const steps = Array.from(stepsContainer.querySelectorAll('.prices-card__step'));
+            if (steps.length === 0) return;
+
+            stepsContainer.classList.add('swiper', 'prices-card__steps--mobile');
+            const wrapper = document.createElement('div');
+            wrapper.className = 'swiper-wrapper';
+            steps.forEach(step => {
+                step.classList.add('swiper-slide');
+                wrapper.appendChild(step);
+            });
+            stepsContainer.prepend(wrapper);
+
+            new Swiper(stepsContainer, {
+                spaceBetween: 20,
+                slidesPerView: 1,
+                pagination: {
+                    el: '.prices-card__pagination',
+                    type: 'fraction',
+                    renderFraction: (currentClass, totalClass) => {
+                        return `{ <span class="${currentClass}"></span> / <span class="${totalClass}">${steps.length}</span> }`;
+                    }
+                },
+                navigation: {
+                    nextEl: '.prices-card__arrow-next'
+                },
+                breakpoints: {
+                    0: { slidesPerView: 1 },
+                    580: { slidesPerView: 2, spaceBetween: 20 },
+                    1024: { slidesPerView: 4, spaceBetween: 20 }
+                }
+            });
+        }
+
+        function initServiceSwipers() {
+            if (typeof Swiper === 'undefined') return;
+            initVariantsSwiper();
+            initPricesCardSwiper();
+        }
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initServiceSwipers);
+        } else {
+            initServiceSwipers();
+        }
+        window.addEventListener('load', initServiceSwipers);
+    </script>
+</body>
+
+</html>

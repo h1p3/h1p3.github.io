@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Unbounded&display=swap" rel="stylesheet" />
+    <title>Галерея — Выездная наркология</title>
+
+    <link href="./assets/css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
+
+    
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <style>
+        /* Страница услуг — разводящая */
+        main {
+            padding-top: 160px; /* высота хедера, чтобы контент шёл сразу под ним */
+        }
+  
+    </style>
+</head>
+
+<body>
+
+    <header class="header" id="header">
+        <div class="header__inner" style="flex-direction: column;">
+
+            <div class="header__inner">
+
+                <a href="/" class="header__logo">
+                    <img src="./assets/images/purpletruck.svg" alt="Логотип" />
+                    Выездная<br>наркология
+                </a>
+
+                <div class="header__leadmagnit">
+                    <div class="header__phone">
+                        <img src="./assets/images/purplecalendar.svg" alt="Расписание" />
+                        <p>Круглосуточно</p>
+                    </div>
+                    <div class="header__location">
+                        <img src="./assets/images/purplelocation.svg" alt="Местоположение" />
+                        Москва, ул. Тверская, 15
+                    </div>
+                </div>
+
+                <button class="header__cta-button">Вызвать врача</button>
+
+                <div class="header_mobile-buttons">
+                    <button class="menu__toggle" id="menuToggle">
+                        <div class="header__mobile-icon" style="padding: 0;">
+                            <img src="./assets/images/purpleburger.svg" alt="Меню" />
+                        </div>
+                    </button>
+                    <div class="header__mobile-icon">
+                        <img src="./assets/images/purplephone.svg" alt="Меню" />
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+            <div class="header__nav-container">
+            <nav class="header__nav header__nav-wrapper">
+                <li class="header__nav-item"><a href="about.html" class="header__nav-link" data-dropdown-trigger="about">О нас</a></li>
+                <li class="header__nav-item"><a href="uslugiouter.html" class="header__nav-link" data-dropdown-trigger="uslugi">Услуги</a></li>
+                <li class="header__nav-item"><a href="prices.html" class="header__nav-link" data-dropdown-trigger="prices">Цены</a></li>
+                <li class="header__nav-item"><a href="vrachiouter.html" class="header__nav-link" data-dropdown-trigger="vrachi">Врачи</a></li>
+                <li class="header__nav-item"><a href="rev.html" class="header__nav-link header__nav-link--active" data-dropdown-trigger="reviews">Отзывы</a></li>
+                <li class="header__nav-item"><a href="faq.html" class="header__nav-link" data-dropdown-trigger="faq">Вопросы</a></li>
+            </nav>
+            <a href="tel:+74951234567" class="header__phone-desktop">
+                <img src="./assets/images/phone.svg" alt="Телефон" />
+                +7 (495) 123-45-67
+            </a>
+            </div>
+            <div class="header__dropdown" id="headerDropdown">
+                <div class="header__dropdown-panel" data-dropdown-panel="uslugi">
+                    <div class="header__dropdown-inner">
+                        <div class="header__dropdown-left">
+                            <a href="uslugiouter.html" class="header__dropdown-cat header__dropdown-cat--active" data-dropdown-cat="alkogolizm">Алкоголизм<span class="header__dropdown-cat-arrow"><svg width="12" height="12" viewBox="0 0 8 12" fill="none"><path d="M1 1L6 6L1 11" stroke="currentColor" stroke-width="2"/></svg></span></a>
+                            <a href="uslugiouter.html" class="header__dropdown-cat" data-dropdown-cat="kodirovanie">Кодирование<span class="header__dropdown-cat-arrow"><svg width="12" height="12" viewBox="0 0 8 12" fill="none"><path d="M1 1L6 6L1 11" stroke="currentColor" stroke-width="2"/></svg></span></a>
+                            <a href="uslugiouter.html" class="header__dropdown-cat" data-dropdown-cat="narkomaniya">Наркомания<span class="header__dropdown-cat-arrow"><svg width="12" height="12" viewBox="0 0 8 12" fill="none"><path d="M1 1L6 6L1 11" stroke="currentColor" stroke-width="2"/></svg></span></a>
+                            <a href="uslugiouter.html" class="header__dropdown-cat" data-dropdown-cat="nadomu">На дому<span class="header__dropdown-cat-arrow"><svg width="12" height="12" viewBox="0 0 8 12" fill="none"><path d="M1 1L6 6L1 11" stroke="currentColor" stroke-width="2"/></svg></span></a>
+                        </div>
+                        <div class="header__dropdown-right">
+                            <div class="header__dropdown-services" data-dropdown-services="alkogolizm">
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 6 000 ₽</span><span class="header__dropdown-card-name">Вывод из запоя</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card header__dropdown-card--highlight"><span class="header__dropdown-card-price">от 6 000 ₽</span><span class="header__dropdown-card-name">Длинный текст<br>в две строки</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 6 000 ₽</span><span class="header__dropdown-card-name">Вывод из запоя</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 6 000 ₽</span><span class="header__dropdown-card-name">Вывод из запоя</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 6 000 ₽</span><span class="header__dropdown-card-name">Вывод из запоя</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 6 000 ₽</span><span class="header__dropdown-card-name">Вывод из запоя</span></a>
+                            </div>
+                            <div class="header__dropdown-services" data-dropdown-services="kodirovanie">
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 8 000 ₽</span><span class="header__dropdown-card-name">Медикаментозное кодирование</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 10 000 ₽</span><span class="header__dropdown-card-name">Гипноз</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 7 000 ₽</span><span class="header__dropdown-card-name">Эспераль</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 9 000 ₽</span><span class="header__dropdown-card-name">Двойной блок</span></a>
+                            </div>
+                            <div class="header__dropdown-services" data-dropdown-services="narkomaniya">
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 12 000 ₽</span><span class="header__dropdown-card-name">Детоксикация</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 15 000 ₽</span><span class="header__dropdown-card-name">Снятие ломки</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 18 000 ₽</span><span class="header__dropdown-card-name">УБОД</span></a>
+                            </div>
+                            <div class="header__dropdown-services" data-dropdown-services="nadomu">
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 6 000 ₽</span><span class="header__dropdown-card-name">Вызов врача на дом</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 8 000 ₽</span><span class="header__dropdown-card-name">Капельница на дому</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 7 000 ₽</span><span class="header__dropdown-card-name">Консультация на дому</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__dropdown-panel" data-dropdown-panel="about">
+                    <div class="header__dropdown-simple">
+                        <a href="about.html#mission">Миссия</a>
+                        <a href="about.html#team">Команда</a>
+                        <a href="about.html#licenses">Лицензии</a>
+                        <a href="about.html">Вся информация</a>
+                    </div>
+                </div>
+                <div class="header__dropdown-panel" data-dropdown-panel="prices">
+                    <div class="header__dropdown-simple">
+                        <a href="prices.html">Прайс-лист</a>
+                        <a href="prices.html#vyvod">Вывод из запоя</a>
+                        <a href="prices.html#kodirovanie">Кодирование</a>
+                        <a href="calc.html">Калькулятор стоимости</a>
+                    </div>
+                </div>
+                <div class="header__dropdown-panel" data-dropdown-panel="vrachi">
+                    <div class="header__dropdown-simple">
+                        <a href="vrachiouter.html">Все врачи</a>
+                        <a href="vrachiinner.html">Наркологи</a>
+                        <a href="vrachiinner.html">Психотерапевты</a>
+                    </div>
+                </div>
+                <div class="header__dropdown-panel" data-dropdown-panel="reviews">
+                    <div class="header__dropdown-simple">
+                        <a href="rev.html">Все отзывы</a>
+                        <a href="rev.html">Видеоотзывы</a>
+                    </div>
+                </div>
+                <div class="header__dropdown-panel" data-dropdown-panel="faq">
+                    <div class="header__dropdown-simple">
+                        <a href="faq.html">Частые вопросы</a>
+                        <a href="contacts.html">Контакты</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="header__nav--mobile" id="mobileMenu">
+            <button class="menu__close" id="menuClose">
+                <img src="./assets/images/cross.svg" alt="Закрыть" />
+            </button>
+            <a href="#" class="header__nav-link--mobile">О нас</a>
+            <a href="uslugiouter.html" class="header__nav-link--mobile">Услуги</a>
+            <a href="#" class="header__nav-link--mobile">Цены</a>
+            <a href="#" class="header__nav-link--mobile">Врачи</a>
+            <a href="#" class="header__nav-link--mobile">Отзывы</a>
+            <a href="#" class="header__nav-link--mobile">Вопросы</a>
+            <div class="header__location-mobile">
+                <img src="./assets/images/location.svg" alt="Местоположение" />
+                Москва, ул. Тверская, 15
+            </div>
+            <a href="tel:+74951234567" class="header__phone-mobile">
+                <img src="./assets/images/phone.svg" alt="Телефон" />
+                +7 (495) 123-45-67
+            </a>
+            <button class="header__cta-button-mobile">Вызвать врача</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="uslugi-hero">
+            <div class="service-hero__breadcrumb">
+                <p class="breadcrumb-first"><a href="index.html">Главная</a> | &nbsp;</p> <a href="rev.html">Отзывы</a>
+            </div>
+            <h2 class="uslugi-hero__title">Отзывы наших пациентов</h2>
+            <p>Реальные истории вызовов, вывода из запоя, кодирования и капельниц.<br>
+                Все отзывы проходят предварительную проверку на подлинность.</p>
+        </section>
+
+        <div class="uslugi-layout">
+            <aside class="uslugi-sidebar">
+                <h2 class="uslugi-sidebar__title">Фильтр</h2>
+                <ul class="uslugi-sidebar__list">
+                    <li class="uslugi-sidebar__item"><a href="#" class="uslugi-sidebar__link uslugi-sidebar__link--active">Все фото <img src="./assets/images/purpleok.svg" alt="выбрано" /></a></li>
+                    <li class="uslugi-sidebar__item"><a href="#" class="uslugi-sidebar__link">Оборудование</a></li>
+                    <li class="uslugi-sidebar__item"><a href="#" class="uslugi-sidebar__link">Процедуры</a></li>
+                    <li class="uslugi-sidebar__item"><a href="#" class="uslugi-sidebar__link">Препараты</a></li>
+                </ul>
+            </aside>
+
+            <div class="uslugi-main">
+
+                <section class="feedback">
+
+                
+                    <div class="feedback__slider swiper">
+                
+                
+                      <div class="feedback__slider-wrapper">
+
+
+                        <div class="feedback__item">
+                          <div class="feedback__item-header">
+                            <h3 class="feedback__item-name">Александр, 34 года</h3>
+                            <div class="feedback__rating">
+                                <img src="./assets/images/star.svg" alt="Звезда">
+                                <img src="./assets/images/star.svg" alt="Звезда">
+                                <img src="./assets/images/star.svg" alt="Звезда">
+                                <img src="./assets/images/star.svg" alt="Звезда">
+                                <img src="./assets/images/halfstar.svg" alt="Половина звезды">
+                              </div>
+                          </div>
+                          <div class="feedback__item-text">
+                            Врач приехал через 40 минут после вызова. Состояние было критическое, но через 2 часа я почувствовал себя нормально. Все анонимно, без лишних вопросов. Очень благодарен за профессионализм!
+                          </div>
+                          <div class="feedback__item-footer">
+                            <p class="feedback__item-category">Кодирование от алкоголизма</p>
+                            <span class="feedback__date">15 ноября 2024</span>
+                          </div>
+                        </div>
+                
+                        <div class="feedback__item">
+                          <div class="feedback__item-header">
+                            <h3 class="feedback__item-name">Мария, 29 лет</h3>
+                            <div class="feedback__rating">
+                                <img src="./assets/images/star.svg" alt="Звезда">
+                                <img src="./assets/images/star.svg" alt="Звезда">
+                                <img src="./assets/images/star.svg" alt="Звезда">
+                                <img src="./assets/images/star.svg" alt="Звезда">
+                                <img src="./assets/images/halfstar.svg" alt="Половина звезды">
+                              </div>
+                          </div>
+                          <div class="feedback__item-text">
+                            Вызвали для отца, который находился в запое 5 дней. Доктор Смирнова провела полную детоксикацию и дала рекомендации по дальнейшему лечению. Отец чувствует себя отлично, даже не верится!
+                          </div>
+                          <div class="feedback__item-footer">
+                            <p class="feedback__item-category">Вывод из запоя</p>
+                            <span class="feedback__date">28 октября 2024</span>
+                          </div>
+                        </div>
+                
+                        <div class="feedback__item">
+                          <div class="feedback__item-header">
+                            <h3 class="feedback__item-name">Дмитрий, 41 год</h3>
+                            <div class="feedback__rating">
+                                <img src="./assets/images/star.svg" alt="Звезда">
+                                <img src="./assets/images/star.svg" alt="Звезда">
+                                <img src="./assets/images/star.svg" alt="Звезда">
+                                <img src="./assets/images/star.svg" alt="Звезда">
+                                <img src="./assets/images/halfstar.svg" alt="Половина звезды">
+                              </div>
+                          </div>
+                          <div class="feedback__item-text">
+                            Помогли мне после сильного отравления некачественным алкоголем. Врач сразу поставил капельницу, дал препараты. На следующий день я был полностью работоспособен. Цена адекватная за такой уровень сервиса.
+                          </div>
+                          <div class="feedback__item-footer">
+                            <p class="feedback__item-category">Капельница на дому</p>
+                            <span class="feedback__date">3 ноября 2024</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slider__mobile_show">
+                        <div class="feedback__pagination"></div>
+                        <button class="feedback__nav feedback__nav-prev swiper-button-prev" type="button">
+                            <img src="./assets/images/arrow.svg" alt="Назад">
+                        </button>
+                        <button class="feedback__nav feedback__nav-next swiper-button-next" type="button">
+                            <img src="./assets/images/arrow.svg" alt="Вперед" class="next_arrow">
+                        </button>
+                    </div>
+                                            
+                    
+                    
+
+                
+                
+                
+                
+                  </section>
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+
+
+
+    <footer class="footer">
+        <div class="footer__all">
+          <div class="footer__info">
+            <div class="footer__column">
+              <div class="footer__logo">
+                <img src="./assets/images/whitetruck.svg" alt="Логотип">
+                <span class="footer__logo-text">Выездная наркология</span>
+              </div>
+              <div class="footer__section">
+                <p>Круглосуточная служба вызова нарколога на дом в Москве. Профессиональная помощь при алкогольной и
+                  наркотической зависимости.</p>
+              </div>
+            </div>
+            <div class="footer__column">
+              <div class="footer__section">
+                <h3 class="footer__section-title">Услуги</h3>
+                <ul class="footer__section-list">
+                  <li><a href="#">Вывод из запоя</a></li>
+                  <li><a href="#">Кодирование от алкоголизма</a></li>
+                  <li><a href="#">Детоксикация</a></li>
+                  <li><a href="#">Психологическая помощь</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__column">
+              <div class="footer__section">
+                <h3 class="footer__section-title">Пациентам</h3>
+                <ul class="footer__section-list">
+                  <li><a href="#">Цены</a></li>
+                  <li><a href="#">Наши врачи</a></li>
+                  <li><a href="#">Отзывы</a></li>
+                  <li><a href="#">Частые вопросы</a></li>
+                  <li><a href="#">Лицензии и документы</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__column">
+              <div class="footer__search">
+                <input type="text" placeholder="Поиск">
+                <button type="submit">
+                  <img src="./assets/images/search.svg" style=" filter: brightness(0) invert(1);" alt="Поиск">
+                </button>
+              </div>
+              <div class="footer__section">
+                <h3 class="footer__section-title">Контакты</h3>
+                <ul class="footer__contacts-list">
+                  <li>
+                    <img src="./assets/images/phone.svg" alt="Телефон">
+                    <span>+7 (495) 123-45-67</span>
+                  </li>
+                  <li>
+                    <img src="./assets/images/calendar.svg" alt="Режим работы">
+                    <span>Круглосуточно 24/7</span>
+                  </li>
+                  <li>
+                    <img src="./assets/images/location.svg" alt="Адрес">
+                    <span>Москва, ул. Тверская, 15</span>
+                  </li>
+                  <li>
+                    <img src="./assets/images/email.svg" alt="Email">
+                    <span>info@vyezd-narkolog.ru</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer__copyright">
+            <p>© 2025 Выездная Наркология. Все права защищены. Лицензия № ЛО-77-01-012345</p>
+            <div class="footer__copyright-links">
+              <a href="#">Политика конфиденциальности</a>
+              <span>|</span>
+              <a href="#">Пользовательское соглашение</a>
+              <span>|</span>
+              <a href="#">Карта сайта</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+  
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const menuClose = document.getElementById('menuClose');
+        const mobileMenu = document.getElementById('mobileMenu');
+        if (menuToggle) menuToggle.addEventListener('click', () => mobileMenu.classList.add('active'));
+        if (menuClose) menuClose.addEventListener('click', () => mobileMenu.classList.remove('active'));
+
+        const header = document.getElementById('header');
+        const hero = document.querySelector('.uslugi-hero');
+        if (header && hero) {
+            window.addEventListener('scroll', () => {
+                header.classList.toggle('header--light', window.scrollY > hero.offsetHeight / 2);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            function initFeedbackSwiper() {
+                const list = document.querySelector('.feedback__slider-wrapper');
+                if (!list || typeof Swiper === 'undefined') return;
+                const cards = Array.from(list.querySelectorAll('.feedback__item'));
+                if (cards.length === 0) return;
+                const wrapper = document.createElement('div');
+                wrapper.className = 'swiper-wrapper';
+                cards.forEach(function (card) {
+                    card.classList.add('swiper-slide');
+                    wrapper.appendChild(card);
+                });
+                list.prepend(wrapper);
+                new Swiper(list, {
+                    spaceBetween: 16,
+                    slidesPerView: 1,
+                    pagination: {
+                        el: '.feedback__pagination',
+                        type: 'fraction',
+                        renderFraction: function (currentClass, totalClass) {
+                            return '{ <span class="' + currentClass + '"></span> / <span class="' + totalClass + '">' + cards.length + '</span> }';
+                        }
+                    },
+                    navigation: {
+                        prevEl: '.feedback__nav-prev',
+                        nextEl: '.feedback__nav-next',
+                    },
+                    breakpoints: {
+                        1300: { slidesPerView: 4, spaceBetween: 20 },
+                        1090: { slidesPerView: 3, spaceBetween: 20 },
+                        750: { slidesPerView: 2 },
+                        400: { slidesPerView: 1.2 },
+                        320: { slidesPerView: 1.2 }
+                    }
+                });
+            }
+            initFeedbackSwiper();
+        });
+    </script>
+</body>
+
+</html>

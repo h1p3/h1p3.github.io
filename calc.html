@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Unbounded&display=swap" rel="stylesheet" />
+    <title>Калькулятор стоимости — Выездная наркология</title>
+
+    <link href="./assets/css/styles.css" rel="stylesheet" />
+
+
+
+    
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <style>
+        /* Страница услуг — разводящая */
+        main {
+            padding-top: 160px; /* высота хедера, чтобы контент шёл сразу под ним */
+        }
+  
+    </style>
+</head>
+
+<body class="page-aktsii">
+
+    <header class="header" id="header">
+        <div class="header__inner" style="flex-direction: column;">
+
+            <div class="header__inner">
+
+                <a href="/" class="header__logo">
+                    <img src="./assets/images/purpletruck.svg" alt="Логотип" />
+                    Выездная<br>наркология
+                </a>
+
+                <div class="header__leadmagnit">
+                    <div class="header__phone">
+                        <img src="./assets/images/purplecalendar.svg" alt="Расписание" />
+                        <p>Круглосуточно</p>
+                    </div>
+                    <div class="header__location">
+                        <img src="./assets/images/purplelocation.svg" alt="Местоположение" />
+                        Москва, ул. Тверская, 15
+                    </div>
+                </div>
+
+                <button class="header__cta-button">Вызвать врача</button>
+
+                <div class="header_mobile-buttons">
+                    <button class="menu__toggle" id="menuToggle">
+                        <div class="header__mobile-icon" style="padding: 0;">
+                            <img src="./assets/images/purpleburger.svg" alt="Меню" />
+                        </div>
+                    </button>
+                    <div class="header__mobile-icon">
+                        <img src="./assets/images/purplephone.svg" alt="Меню" />
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+            <nav class="header__nav header__nav-wrapper">
+                <li class="header__nav-item"><a href="about.html" class="header__nav-link" data-dropdown-trigger="about">О нас</a></li>
+                <li class="header__nav-item"><a href="uslugiouter.html" class="header__nav-link" data-dropdown-trigger="uslugi">Услуги</a></li>
+                <li class="header__nav-item"><a href="prices.html" class="header__nav-link header__nav-link--active" data-dropdown-trigger="prices">Цены</a></li>
+                <li class="header__nav-item"><a href="vrachiouter.html" class="header__nav-link" data-dropdown-trigger="vrachi">Врачи</a></li>
+                <li class="header__nav-item"><a href="rev.html" class="header__nav-link" data-dropdown-trigger="reviews">Отзывы</a></li>
+                <li class="header__nav-item"><a href="faq.html" class="header__nav-link" data-dropdown-trigger="faq">Вопросы</a></li>
+                <a href="tel:+74951234567" class="header__phone-desktop">
+                    <img src="./assets/images/phone.svg" alt="Телефон" />
+                    +7 (495) 123-45-67
+                </a>
+            </nav>
+            <div class="header__dropdown" id="headerDropdown">
+                <div class="header__dropdown-panel" data-dropdown-panel="uslugi">
+                    <div class="header__dropdown-inner">
+                        <div class="header__dropdown-left">
+                            <a href="uslugiouter.html" class="header__dropdown-cat header__dropdown-cat--active" data-dropdown-cat="alkogolizm">Алкоголизм<span class="header__dropdown-cat-arrow"><svg width="12" height="12" viewBox="0 0 8 12" fill="none"><path d="M1 1L6 6L1 11" stroke="currentColor" stroke-width="2"/></svg></span></a>
+                            <a href="uslugiouter.html" class="header__dropdown-cat" data-dropdown-cat="kodirovanie">Кодирование<span class="header__dropdown-cat-arrow"><svg width="12" height="12" viewBox="0 0 8 12" fill="none"><path d="M1 1L6 6L1 11" stroke="currentColor" stroke-width="2"/></svg></span></a>
+                            <a href="uslugiouter.html" class="header__dropdown-cat" data-dropdown-cat="narkomaniya">Наркомания<span class="header__dropdown-cat-arrow"><svg width="12" height="12" viewBox="0 0 8 12" fill="none"><path d="M1 1L6 6L1 11" stroke="currentColor" stroke-width="2"/></svg></span></a>
+                            <a href="uslugiouter.html" class="header__dropdown-cat" data-dropdown-cat="nadomu">На дому<span class="header__dropdown-cat-arrow"><svg width="12" height="12" viewBox="0 0 8 12" fill="none"><path d="M1 1L6 6L1 11" stroke="currentColor" stroke-width="2"/></svg></span></a>
+                        </div>
+                        <div class="header__dropdown-right">
+                            <div class="header__dropdown-services" data-dropdown-services="alkogolizm">
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 6 000 ₽</span><span class="header__dropdown-card-name">Вывод из запоя</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card header__dropdown-card--highlight"><span class="header__dropdown-card-price">от 6 000 ₽</span><span class="header__dropdown-card-name">Длинный текст<br>в две строки</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 6 000 ₽</span><span class="header__dropdown-card-name">Вывод из запоя</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 6 000 ₽</span><span class="header__dropdown-card-name">Вывод из запоя</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 6 000 ₽</span><span class="header__dropdown-card-name">Вывод из запоя</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 6 000 ₽</span><span class="header__dropdown-card-name">Вывод из запоя</span></a>
+                            </div>
+                            <div class="header__dropdown-services" data-dropdown-services="kodirovanie">
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 8 000 ₽</span><span class="header__dropdown-card-name">Медикаментозное кодирование</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 10 000 ₽</span><span class="header__dropdown-card-name">Гипноз</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 7 000 ₽</span><span class="header__dropdown-card-name">Эспераль</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 9 000 ₽</span><span class="header__dropdown-card-name">Двойной блок</span></a>
+                            </div>
+                            <div class="header__dropdown-services" data-dropdown-services="narkomaniya">
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 12 000 ₽</span><span class="header__dropdown-card-name">Детоксикация</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 15 000 ₽</span><span class="header__dropdown-card-name">Снятие ломки</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 18 000 ₽</span><span class="header__dropdown-card-name">УБОД</span></a>
+                            </div>
+                            <div class="header__dropdown-services" data-dropdown-services="nadomu">
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 6 000 ₽</span><span class="header__dropdown-card-name">Вызов врача на дом</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 8 000 ₽</span><span class="header__dropdown-card-name">Капельница на дому</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 7 000 ₽</span><span class="header__dropdown-card-name">Консультация на дому</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__dropdown-panel" data-dropdown-panel="about">
+                    <div class="header__dropdown-simple">
+                        <a href="about.html#mission">Миссия</a>
+                        <a href="about.html#team">Команда</a>
+                        <a href="about.html#licenses">Лицензии</a>
+                        <a href="about.html">Вся информация</a>
+                    </div>
+                </div>
+                <div class="header__dropdown-panel" data-dropdown-panel="prices">
+                    <div class="header__dropdown-simple">
+                        <a href="prices.html">Прайс-лист</a>
+                        <a href="prices.html#vyvod">Вывод из запоя</a>
+                        <a href="prices.html#kodirovanie">Кодирование</a>
+                        <a href="calc.html">Калькулятор стоимости</a>
+                    </div>
+                </div>
+                <div class="header__dropdown-panel" data-dropdown-panel="vrachi">
+                    <div class="header__dropdown-simple">
+                        <a href="vrachiouter.html">Все врачи</a>
+                        <a href="vrachiinner.html">Наркологи</a>
+                        <a href="vrachiinner.html">Психотерапевты</a>
+                    </div>
+                </div>
+                <div class="header__dropdown-panel" data-dropdown-panel="reviews">
+                    <div class="header__dropdown-simple">
+                        <a href="rev.html">Все отзывы</a>
+                        <a href="rev.html">Видеоотзывы</a>
+                    </div>
+                </div>
+                <div class="header__dropdown-panel" data-dropdown-panel="faq">
+                    <div class="header__dropdown-simple">
+                        <a href="faq.html">Частые вопросы</a>
+                        <a href="contacts.html">Контакты</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="header__nav--mobile" id="mobileMenu">
+            <button class="menu__close" id="menuClose">
+                <img src="./assets/images/cross.svg" alt="Закрыть" />
+            </button>
+            <a href="#" class="header__nav-link--mobile">О нас</a>
+            <a href="uslugiouter.html" class="header__nav-link--mobile">Услуги</a>
+            <a href="aktsii.html" class="header__nav-link--mobile">Акции</a>
+            <a href="#" class="header__nav-link--mobile">Цены</a>
+            <a href="#" class="header__nav-link--mobile">Врачи</a>
+            <a href="#" class="header__nav-link--mobile">Отзывы</a>
+            <a href="#" class="header__nav-link--mobile">Вопросы</a>
+            <div class="header__location-mobile">
+                <img src="./assets/images/location.svg" alt="Местоположение" />
+                Москва, ул. Тверская, 15
+            </div>
+            <a href="tel:+74951234567" class="header__phone-mobile">
+                <img src="./assets/images/phone.svg" alt="Телефон" />
+                +7 (495) 123-45-67
+            </a>
+            <button class="header__cta-button-mobile">Вызвать врача</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="uslugi-hero">
+            <div class="service-hero__breadcrumb">
+                <p class="breadcrumb-first"><a href="index.html">Главная</a> | &nbsp;</p> <a href="calc.html">Калькулятор</a>
+            </div>
+            <h2 class="uslugi-hero__title">Рассчитайте стоимость вашей услуги</h2>
+        </section>
+
+        <section class="calc-section">
+            <div class="calc-section__inner">
+                <div class="calc-section__layout">
+
+                    <div>
+                    <h3 class="calc-section__heading">Выберите параметры</h3>
+                    <div class="calc-section__params">
+                        
+                        <div class="calc-select" data-expander>
+                            <button type="button" class="calc-select__trigger" aria-expanded="false" aria-haspopup="listbox">
+                                <span class="calc-select__value">Вывод из запоя</span>
+
+                                <div class="calc-select__arrow-box">
+                                <img src="./assets/images/arrow.svg" alt="" class="calc-select__arrow" aria-hidden="true" />
+                            </div>
+
+
+                            </button>
+                            <ul class="calc-select__dropdown" role="listbox">
+                                <li role="option" data-value="alcoholism">Лечение алкоголизма</li>
+                                <li role="option" data-value="zapoy">Вывод из запоя</li>
+                                <li role="option" data-value="rehab">Реабилитация</li>
+                            </ul>
+                        </div>
+                        <div class="calc-duration">
+                            <label class="calc-duration__label">Продолжительность (дней)</label>
+                            <div class="calc-duration__input-wrap">
+                                <input type="number" class="calc-duration__input" value="12" min="1" max="365" />
+                                <div class="calc-duration__arrows">
+                                    <button type="button" class="calc-duration__btn calc-duration__btn--up" aria-label="Увеличить"></button>
+                                    <button type="button" class="calc-duration__btn calc-duration__btn--down" aria-label="Уменьшить"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calc-options">
+                            <h6 class="calc-options__title">Дополнительные опции</h6>
+                            <label class="calc-option">
+                                <input type="checkbox" class="calc-option__input" data-option="psychologist" data-price="2000" checked />
+                                <span class="calc-option__box"></span>
+                                <span class="calc-option__text">Консультация психолога <span class="calc-option__price">(+2 000 P)</span></span>
+                            </label>
+                            <label class="calc-option">
+                                <input type="checkbox" class="calc-option__input" data-option="dropper" data-price="1500" />
+                                <span class="calc-option__box"></span>
+                                <span class="calc-option__text">Вторая капельница <span class="calc-option__price">(+1 500 P)</span></span>
+                            </label>
+                            <label class="calc-option">
+                                <input type="checkbox" class="calc-option__input" data-option="transport" data-price="0" />
+                                <span class="calc-option__box"></span>
+                                <span class="calc-option__text">Транспортировка в клинику <span class="calc-option__price">(бесплатно)</span></span>
+                            </label>
+                            <label class="calc-option">
+                                <input type="checkbox" class="calc-option__input" data-option="ecg" data-price="800" />
+                                <span class="calc-option__box"></span>
+                                <span class="calc-option__text">ЭКГ и мониторинг <span class="calc-option__price">(+800 P)</span></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                    <div class="calc-section__right">
+                        <div> <h3 class="calc-section__heading">Детализация</h3>
+                        <div class="calc-details">
+                            
+                            <div class="calc-details__table">
+                                <div class="calc-details__row calc-details__row--header">
+                                    <span>Позиция</span>
+                                    <span>Сумма</span>
+                                </div>
+                                <div class="calc-details__body" id="calcDetailsBody"></div>
+                                <div class="calc-details__row calc-details__row--total">
+                                    <span>Итого:</span>
+                                    <span id="calcTotal">8 000 P</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                    <h3 class="calc-section__heading">Ваш рассчет</h3>
+                        <div class="calc-result">
+                            <p class="calc-result__label">Ориентировочная стоимость:</p>
+                            <p class="calc-result__sum" id="calcResultSum">8 000 P</p>
+                            <button type="button" class="calc-result__btn">Оставить заявку</button>
+                            <p class="calc-result__note">Точная цена определяется врачом после осмотра</p>
+                        </div>
+                    </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__all">
+          <div class="footer__info">
+            <div class="footer__column">
+              <div class="footer__logo">
+                <img src="./assets/images/whitetruck.svg" alt="Логотип">
+                <span class="footer__logo-text">Выездная наркология</span>
+              </div>
+              <div class="footer__section">
+                <p>Круглосуточная служба вызова нарколога на дом в Москве. Профессиональная помощь при алкогольной и
+                  наркотической зависимости.</p>
+              </div>
+            </div>
+            <div class="footer__column">
+              <div class="footer__section">
+                <h3 class="footer__section-title">Услуги</h3>
+                <ul class="footer__section-list">
+                  <li><a href="#">Вывод из запоя</a></li>
+                  <li><a href="#">Кодирование от алкоголизма</a></li>
+                  <li><a href="#">Детоксикация</a></li>
+                  <li><a href="#">Психологическая помощь</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__column">
+              <div class="footer__section">
+                <h3 class="footer__section-title">Пациентам</h3>
+                <ul class="footer__section-list">
+                  <li><a href="#">Цены</a></li>
+                  <li><a href="#">Наши врачи</a></li>
+                  <li><a href="#">Отзывы</a></li>
+                  <li><a href="#">Частые вопросы</a></li>
+                  <li><a href="#">Лицензии и документы</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__column">
+              <div class="footer__search">
+                <input type="text" placeholder="Поиск">
+                <button type="submit">
+                  <img src="./assets/images/search.svg" style=" filter: brightness(0) invert(1);" alt="Поиск">
+                </button>
+              </div>
+              <div class="footer__section">
+                <h3 class="footer__section-title">Контакты</h3>
+                <ul class="footer__contacts-list">
+                  <li>
+                    <img src="./assets/images/phone.svg" alt="Телефон">
+                    <span>+7 (495) 123-45-67</span>
+                  </li>
+                  <li>
+                    <img src="./assets/images/calendar.svg" alt="Режим работы">
+                    <span>Круглосуточно 24/7</span>
+                  </li>
+                  <li>
+                    <img src="./assets/images/location.svg" alt="Адрес">
+                    <span>Москва, ул. Тверская, 15</span>
+                  </li>
+                  <li>
+                    <img src="./assets/images/email.svg" alt="Email">
+                    <span>info@vyezd-narkolog.ru</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer__copyright">
+            <p>© 2025 Выездная Наркология. Все права защищены. Лицензия № ЛО-77-01-012345</p>
+            <div class="footer__copyright-links">
+              <a href="#">Политика конфиденциальности</a>
+              <span>|</span>
+              <a href="#">Пользовательское соглашение</a>
+              <span>|</span>
+              <a href="#">Карта сайта</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+  
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const menuClose = document.getElementById('menuClose');
+        const mobileMenu = document.getElementById('mobileMenu');
+        if (menuToggle) menuToggle.addEventListener('click', () => mobileMenu.classList.add('active'));
+        if (menuClose) menuClose.addEventListener('click', () => mobileMenu.classList.remove('active'));
+
+        const header = document.getElementById('header');
+        const hero = document.querySelector('.uslugi-hero');
+        if (header && hero) {
+            window.addEventListener('scroll', () => {
+                header.classList.toggle('header--light', window.scrollY > hero.offsetHeight / 2);
+            });
+        }
+
+        /* Калькулятор — селектор/экспандер */
+        const calcSelect = document.querySelector('.calc-select');
+        const calcTrigger = document.querySelector('.calc-select__trigger');
+        const calcValue = document.querySelector('.calc-select__value');
+        const calcOptions = document.querySelectorAll('.calc-select__dropdown li');
+
+        if (calcSelect && calcTrigger) {
+            calcTrigger.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isOpen = calcSelect.hasAttribute('data-open');
+                if (isOpen) {
+                    calcSelect.removeAttribute('data-open');
+                    calcTrigger.setAttribute('aria-expanded', 'false');
+                } else {
+                    calcSelect.setAttribute('data-open', '');
+                    calcTrigger.setAttribute('aria-expanded', 'true');
+                }
+            });
+
+            calcOptions.forEach((opt) => {
+                opt.addEventListener('click', () => {
+                    calcValue.textContent = opt.textContent;
+                    calcOptions.forEach((o) => o.removeAttribute('aria-selected'));
+                    opt.setAttribute('aria-selected', 'true');
+                    calcSelect.removeAttribute('data-open');
+                    calcTrigger.setAttribute('aria-expanded', 'false');
+                    updateCalc();
+                });
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!calcSelect.contains(e.target)) {
+                    calcSelect.removeAttribute('data-open');
+                    calcTrigger.setAttribute('aria-expanded', 'false');
+                }
+            });
+        }
+
+        /* Калькулятор — продолжительность */
+        const durationInput = document.querySelector('.calc-duration__input');
+        const durationUp = document.querySelector('.calc-duration__btn--up');
+        const durationDown = document.querySelector('.calc-duration__btn--down');
+
+        if (durationInput && durationUp && durationDown) {
+            durationUp.addEventListener('click', () => {
+                const v = Math.min(365, parseInt(durationInput.value, 10) + 1);
+                durationInput.value = v;
+                updateCalc();
+            });
+            durationDown.addEventListener('click', () => {
+                const v = Math.max(1, parseInt(durationInput.value, 10) - 1);
+                durationInput.value = v;
+                updateCalc();
+            });
+            durationInput.addEventListener('change', updateCalc);
+        }
+
+        /* Калькулятор — расчёт */
+        const servicePrices = {
+            alcoholism: 8000,
+            zapoy: 500,
+            rehab: 15000
+        };
+
+        const serviceNames = {
+            alcoholism: 'Лечение алкоголизма',
+            zapoy: 'Вывод из запоя',
+            rehab: 'Реабилитация'
+        };
+
+        const optionNames = {
+            psychologist: 'Консультация психолога',
+            dropper: 'Вторая капельница',
+            transport: 'Транспортировка в клинику',
+            ecg: 'ЭКГ и мониторинг'
+        };
+
+        function formatPrice(n) {
+            return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' P';
+        }
+
+        function updateCalc() {
+            const selectedOpt = document.querySelector('.calc-select__dropdown li[aria-selected="true"]') ||
+                document.querySelector('.calc-select__dropdown li[data-value="zapoy"]');
+            const serviceKey = selectedOpt ? selectedOpt.getAttribute('data-value') : 'zapoy';
+            const days = parseInt(durationInput?.value || 12, 10) || 12;
+
+            let basePrice = 0;
+            if (serviceKey === 'zapoy') {
+                basePrice = servicePrices.zapoy * days;
+            } else {
+                basePrice = servicePrices[serviceKey] || servicePrices.zapoy * days;
+            }
+
+            const items = [{ name: serviceNames[serviceKey] || 'Вывод из запоя', price: basePrice }];
+            const checkboxes = document.querySelectorAll('.calc-option__input:checked');
+            checkboxes.forEach((cb) => {
+                const opt = cb.getAttribute('data-option');
+                const price = parseInt(cb.getAttribute('data-price'), 10) || 0;
+                if (opt && optionNames[opt]) {
+                    items.push({ name: optionNames[opt], price });
+                }
+            });
+
+            const total = items.reduce((s, i) => s + i.price, 0);
+
+            const body = document.getElementById('calcDetailsBody');
+            const totalEl = document.getElementById('calcTotal');
+            const resultEl = document.getElementById('calcResultSum');
+
+            if (body) {
+                body.innerHTML = items.map((i) =>
+                    `<div class="calc-details__item"><span>${i.name}</span><span>${formatPrice(i.price)}</span></div>`
+                ).join('');
+            }
+            if (totalEl) totalEl.textContent = formatPrice(total);
+            if (resultEl) resultEl.textContent = formatPrice(total);
+        }
+
+        document.querySelectorAll('.calc-option__input').forEach((cb) => {
+            cb.addEventListener('change', updateCalc);
+        });
+
+        const zapoyOpt = document.querySelector('.calc-select__dropdown li[data-value="zapoy"]');
+        if (zapoyOpt) zapoyOpt.setAttribute('aria-selected', 'true');
+        updateCalc();
+    </script>
+</body>
+
+</html>

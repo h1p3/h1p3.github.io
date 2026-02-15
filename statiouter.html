@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Unbounded&display=swap" rel="stylesheet" />
+    <title>Наши услуги — Выездная наркология</title>
+
+    <link href="./assets/css/styles.css" rel="stylesheet" />
+
+
+
+    
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <style>
+        /* Страница услуг — разводящая */
+        main {
+            padding-top: 160px; /* высота хедера, чтобы контент шёл сразу под ним */
+        }
+  
+    </style>
+</head>
+
+<body>
+
+    <header class="header" id="header">
+        <div class="header__inner" style="flex-direction: column;">
+
+            <div class="header__inner">
+
+                <a href="/" class="header__logo">
+                    <img src="./assets/images/purpletruck.svg" alt="Логотип" />
+                    Выездная<br>наркология
+                </a>
+
+                <div class="header__leadmagnit">
+                    <div class="header__phone">
+                        <img src="./assets/images/purplecalendar.svg" alt="Расписание" />
+                        <p>Круглосуточно</p>
+                    </div>
+                    <div class="header__location">
+                        <img src="./assets/images/purplelocation.svg" alt="Местоположение" />
+                        Москва, ул. Тверская, 15
+                    </div>
+                </div>
+
+                <button class="header__cta-button">Вызвать врача</button>
+
+                <div class="header_mobile-buttons">
+                    <button class="menu__toggle" id="menuToggle">
+                        <div class="header__mobile-icon" style="padding: 0;">
+                            <img src="./assets/images/purpleburger.svg" alt="Меню" />
+                        </div>
+                    </button>
+                    <div class="header__mobile-icon">
+                        <img src="./assets/images/purplephone.svg" alt="Меню" />
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+            <div class="header__nav-container">
+            <nav class="header__nav header__nav-wrapper">
+                <li class="header__nav-item"><a href="about.html" class="header__nav-link" data-dropdown-trigger="about">О нас</a></li>
+                <li class="header__nav-item"><a href="uslugiouter.html" class="header__nav-link header__nav-link--active" data-dropdown-trigger="uslugi">Услуги</a></li>
+                <li class="header__nav-item"><a href="prices.html" class="header__nav-link" data-dropdown-trigger="prices">Цены</a></li>
+                <li class="header__nav-item"><a href="vrachiouter.html" class="header__nav-link" data-dropdown-trigger="vrachi">Врачи</a></li>
+                <li class="header__nav-item"><a href="rev.html" class="header__nav-link" data-dropdown-trigger="reviews">Отзывы</a></li>
+                <li class="header__nav-item"><a href="faq.html" class="header__nav-link" data-dropdown-trigger="faq">Вопросы</a></li>
+            </nav>
+            <a href="tel:+74951234567" class="header__phone-desktop">
+                <img src="./assets/images/phone.svg" alt="Телефон" />
+                +7 (495) 123-45-67
+            </a>
+            </div>
+            <div class="header__dropdown" id="headerDropdown">
+                <div class="header__dropdown-panel" data-dropdown-panel="uslugi">
+                    <div class="header__dropdown-inner">
+                        <div class="header__dropdown-left">
+                            <a href="uslugiouter.html" class="header__dropdown-cat header__dropdown-cat--active" data-dropdown-cat="alkogolizm">Алкоголизм<span class="header__dropdown-cat-arrow"><svg width="12" height="12" viewBox="0 0 8 12" fill="none"><path d="M1 1L6 6L1 11" stroke="currentColor" stroke-width="2"/></svg></span></a>
+                            <a href="uslugiouter.html" class="header__dropdown-cat" data-dropdown-cat="kodirovanie">Кодирование<span class="header__dropdown-cat-arrow"><svg width="12" height="12" viewBox="0 0 8 12" fill="none"><path d="M1 1L6 6L1 11" stroke="currentColor" stroke-width="2"/></svg></span></a>
+                            <a href="uslugiouter.html" class="header__dropdown-cat" data-dropdown-cat="narkomaniya">Наркомания<span class="header__dropdown-cat-arrow"><svg width="12" height="12" viewBox="0 0 8 12" fill="none"><path d="M1 1L6 6L1 11" stroke="currentColor" stroke-width="2"/></svg></span></a>
+                            <a href="uslugiouter.html" class="header__dropdown-cat" data-dropdown-cat="nadomu">На дому<span class="header__dropdown-cat-arrow"><svg width="12" height="12" viewBox="0 0 8 12" fill="none"><path d="M1 1L6 6L1 11" stroke="currentColor" stroke-width="2"/></svg></span></a>
+                        </div>
+                        <div class="header__dropdown-right">
+                            <div class="header__dropdown-services" data-dropdown-services="alkogolizm">
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 6 000 ₽</span><span class="header__dropdown-card-name">Вывод из запоя</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card header__dropdown-card--highlight"><span class="header__dropdown-card-price">от 6 000 ₽</span><span class="header__dropdown-card-name">Длинный текст<br>в две строки</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 6 000 ₽</span><span class="header__dropdown-card-name">Вывод из запоя</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 6 000 ₽</span><span class="header__dropdown-card-name">Вывод из запоя</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 6 000 ₽</span><span class="header__dropdown-card-name">Вывод из запоя</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 6 000 ₽</span><span class="header__dropdown-card-name">Вывод из запоя</span></a>
+                            </div>
+                            <div class="header__dropdown-services" data-dropdown-services="kodirovanie">
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 8 000 ₽</span><span class="header__dropdown-card-name">Медикаментозное кодирование</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 10 000 ₽</span><span class="header__dropdown-card-name">Гипноз</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 7 000 ₽</span><span class="header__dropdown-card-name">Эспераль</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 9 000 ₽</span><span class="header__dropdown-card-name">Двойной блок</span></a>
+                            </div>
+                            <div class="header__dropdown-services" data-dropdown-services="narkomaniya">
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 12 000 ₽</span><span class="header__dropdown-card-name">Детоксикация</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 15 000 ₽</span><span class="header__dropdown-card-name">Снятие ломки</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 18 000 ₽</span><span class="header__dropdown-card-name">УБОД</span></a>
+                            </div>
+                            <div class="header__dropdown-services" data-dropdown-services="nadomu">
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 6 000 ₽</span><span class="header__dropdown-card-name">Вызов врача на дом</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 8 000 ₽</span><span class="header__dropdown-card-name">Капельница на дому</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 7 000 ₽</span><span class="header__dropdown-card-name">Консультация на дому</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__dropdown-panel" data-dropdown-panel="about">
+                    <div class="header__dropdown-simple">
+                        <a href="about.html#mission">Миссия</a>
+                        <a href="about.html#team">Команда</a>
+                        <a href="about.html#licenses">Лицензии</a>
+                        <a href="about.html">Вся информация</a>
+                    </div>
+                </div>
+                <div class="header__dropdown-panel" data-dropdown-panel="prices">
+                    <div class="header__dropdown-simple">
+                        <a href="prices.html">Прайс-лист</a>
+                        <a href="prices.html#vyvod">Вывод из запоя</a>
+                        <a href="prices.html#kodirovanie">Кодирование</a>
+                        <a href="calc.html">Калькулятор стоимости</a>
+                    </div>
+                </div>
+                <div class="header__dropdown-panel" data-dropdown-panel="vrachi">
+                    <div class="header__dropdown-simple">
+                        <a href="vrachiouter.html">Все врачи</a>
+                        <a href="vrachiinner.html">Наркологи</a>
+                        <a href="vrachiinner.html">Психотерапевты</a>
+                    </div>
+                </div>
+                <div class="header__dropdown-panel" data-dropdown-panel="reviews">
+                    <div class="header__dropdown-simple">
+                        <a href="rev.html">Все отзывы</a>
+                        <a href="rev.html">Видеоотзывы</a>
+                    </div>
+                </div>
+                <div class="header__dropdown-panel" data-dropdown-panel="faq">
+                    <div class="header__dropdown-simple">
+                        <a href="faq.html">Частые вопросы</a>
+                        <a href="contacts.html">Контакты</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="header__nav--mobile" id="mobileMenu">
+            <button class="menu__close" id="menuClose">
+                <img src="./assets/images/cross.svg" alt="Закрыть" />
+            </button>
+            <a href="#" class="header__nav-link--mobile">О нас</a>
+            <a href="uslugiouter.html" class="header__nav-link--mobile">Услуги</a>
+            <a href="#" class="header__nav-link--mobile">Цены</a>
+            <a href="#" class="header__nav-link--mobile">Врачи</a>
+            <a href="#" class="header__nav-link--mobile">Отзывы</a>
+            <a href="#" class="header__nav-link--mobile">Вопросы</a>
+            <div class="header__location-mobile">
+                <img src="./assets/images/location.svg" alt="Местоположение" />
+                Москва, ул. Тверская, 15
+            </div>
+            <a href="tel:+74951234567" class="header__phone-mobile">
+                <img src="./assets/images/phone.svg" alt="Телефон" />
+                +7 (495) 123-45-67
+            </a>
+            <button class="header__cta-button-mobile">Вызвать врача</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="uslugi-hero">
+            <div class="uslugi-hero__breadcrumb">
+                <a href="index.html">Главная</a> | Статьи
+            </div>
+            <h2 class="uslugi-hero__title">Наши статьи</h2>
+        </section>
+
+
+
+        <div class="uslugi-layout">
+            <aside class="uslugi-sidebar">
+                <h2 class="uslugi-sidebar__title">Фильтр</h2>
+                <ul class="uslugi-sidebar__list">
+                    <li class="uslugi-sidebar__item"><a href="#" class="uslugi-sidebar__link uslugi-sidebar__link--active">Все статьи <img src="./assets/images/purpleok.svg" alt="выбрано" /></a></li>
+                    <li class="uslugi-sidebar__item"><a href="#" class="uslugi-sidebar__link">Алкоголизм</a></li>
+
+                    <li class="uslugi-sidebar__item"><a href="#" class="uslugi-sidebar__link">Наркомания</a></li>
+                    <li class="uslugi-sidebar__item"><a href="#" class="uslugi-sidebar__link">Реабилитация</a></li>
+                </ul>
+            </aside>
+
+
+
+            <div class="stati-grid">
+                <a href="#" class="stati-card" style="text-decoration: none; color: inherit; display: block;">
+                    <div class="stati-card__img-wrap">
+                        <img src="./assets/images/stati.png" alt="" class="stati-card__img" />
+                    </div>
+                    <div class="stati-card__body">
+                        <h3 class="stati-card__title">Взрослые дети алкоголиков</h3>
+                        <p class="stati-card__snippet">В нашем обществе существует множество понятий, которые...</p>
+                        <div class="stati-card__meta">
+                            <span class="stati-card__date">12.11.2025</span>
+                            <span class="stati-card__views"><svg class="stati-card__eye" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5C7.45455 5 3.57273 7.90909 2 12C3.57273 16.0909 7.45455 19 12 19C16.5455 19 20.4273 16.0909 22 12C20.4273 7.90909 16.5455 5 12 5ZM12 17C9.79091 17 8 15.2091 8 12C8 8.79091 9.79091 7 12 7C14.2091 7 16 8.79091 16 12C16 15.2091 14.2091 17 12 17ZM12 9C10.8955 9 10 9.89545 10 11C10 12.1045 10.8955 13 12 13C13.1045 13 14 12.1045 14 11C14 9.89545 13.1045 9 12 9Z" fill="currentColor"/></svg> 909</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="stati-card" style="text-decoration: none; color: inherit; display: block;">
+                    <div class="stati-card__img-wrap">
+                        <img src="./assets/images/stati.png" alt="" class="stati-card__img" />
+                    </div>
+                    <div class="stati-card__body">
+                        <h3 class="stati-card__title">Зависимость от экстази: как распознать и помочь?</h3>
+                        <p class="stati-card__snippet">В нашем обществе существует множество понятий, которые...</p>
+                        <div class="stati-card__meta">
+                            <span class="stati-card__date">12.11.2025</span>
+                            <span class="stati-card__views"><svg class="stati-card__eye" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5C7.45455 5 3.57273 7.90909 2 12C3.57273 16.0909 7.45455 19 12 19C16.5455 19 20.4273 16.0909 22 12C20.4273 7.90909 16.5455 5 12 5ZM12 17C9.79091 17 8 15.2091 8 12C8 8.79091 9.79091 7 12 7C14.2091 7 16 8.79091 16 12C16 15.2091 14.2091 17 12 17ZM12 9C10.8955 9 10 9.89545 10 11C10 12.1045 10.8955 13 12 13C13.1045 13 14 12.1045 14 11C14 9.89545 13.1045 9 12 9Z" fill="currentColor"/></svg> 909</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="stati-card" style="text-decoration: none; color: inherit; display: block;">
+                    <div class="stati-card__img-wrap">
+                        <img src="./assets/images/stati.png" alt="" class="stati-card__img" />
+                    </div>
+                    <div class="stati-card__body">
+                        <h3 class="stati-card__title">Лечение абстинентного синдрома при алкоголизме</h3>
+                        <p class="stati-card__snippet">В нашем обществе существует множество понятий, которые...</p>
+                        <div class="stati-card__meta">
+                            <span class="stati-card__date">12.11.2025</span>
+                            <span class="stati-card__views"><svg class="stati-card__eye" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5C7.45455 5 3.57273 7.90909 2 12C3.57273 16.0909 7.45455 19 12 19C16.5455 19 20.4273 16.0909 22 12C20.4273 7.90909 16.5455 5 12 5ZM12 17C9.79091 17 8 15.2091 8 12C8 8.79091 9.79091 7 12 7C14.2091 7 16 8.79091 16 12C16 15.2091 14.2091 17 12 17ZM12 9C10.8955 9 10 9.89545 10 11C10 12.1045 10.8955 13 12 13C13.1045 13 14 12.1045 14 11C14 9.89545 13.1045 9 12 9Z" fill="currentColor"/></svg> 909</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="stati-card" style="text-decoration: none; color: inherit; display: block;">
+                    <div class="stati-card__img-wrap">
+                        <img src="./assets/images/stati.png" alt="" class="stati-card__img" />
+                    </div>
+                    <div class="stati-card__body">
+                        <h3 class="stati-card__title">Взрослые дети алкоголиков</h3>
+                        <p class="stati-card__snippet">В нашем обществе существует множество понятий, которые...</p>
+                        <div class="stati-card__meta">
+                            <span class="stati-card__date">12.11.2025</span>
+                            <span class="stati-card__views"><svg class="stati-card__eye" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5C7.45455 5 3.57273 7.90909 2 12C3.57273 16.0909 7.45455 19 12 19C16.5455 19 20.4273 16.0909 22 12C20.4273 7.90909 16.5455 5 12 5ZM12 17C9.79091 17 8 15.2091 8 12C8 8.79091 9.79091 7 12 7C14.2091 7 16 8.79091 16 12C16 15.2091 14.2091 17 12 17ZM12 9C10.8955 9 10 9.89545 10 11C10 12.1045 10.8955 13 12 13C13.1045 13 14 12.1045 14 11C14 9.89545 13.1045 9 12 9Z" fill="currentColor"/></svg> 909</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="stati-card" style="text-decoration: none; color: inherit; display: block;">
+                    <div class="stati-card__img-wrap">
+                        <img src="./assets/images/stati.png" alt="" class="stati-card__img" />
+                    </div>
+                    <div class="stati-card__body">
+                        <h3 class="stati-card__title">Зависимость от экстази: как распознать и помочь?</h3>
+                        <p class="stati-card__snippet">В нашем обществе существует множество понятий, которые...</p>
+                        <div class="stati-card__meta">
+                            <span class="stati-card__date">12.11.2025</span>
+                            <span class="stati-card__views"><svg class="stati-card__eye" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5C7.45455 5 3.57273 7.90909 2 12C3.57273 16.0909 7.45455 19 12 19C16.5455 19 20.4273 16.0909 22 12C20.4273 7.90909 16.5455 5 12 5ZM12 17C9.79091 17 8 15.2091 8 12C8 8.79091 9.79091 7 12 7C14.2091 7 16 8.79091 16 12C16 15.2091 14.2091 17 12 17ZM12 9C10.8955 9 10 9.89545 10 11C10 12.1045 10.8955 13 12 13C13.1045 13 14 12.1045 14 11C14 9.89545 13.1045 9 12 9Z" fill="currentColor"/></svg> 909</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="stati-card" style="text-decoration: none; color: inherit; display: block;">
+                    <div class="stati-card__img-wrap">
+                        <img src="./assets/images/stati.png" alt="" class="stati-card__img" />
+                    </div>
+                    <div class="stati-card__body">
+                        <h3 class="stati-card__title">Лечение абстинентного синдрома при алкоголизме</h3>
+                        <p class="stati-card__snippet">В нашем обществе существует множество понятий, которые...</p>
+                        <div class="stati-card__meta">
+                            <span class="stati-card__date">12.11.2025</span>
+                            <span class="stati-card__views"><svg class="stati-card__eye" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5C7.45455 5 3.57273 7.90909 2 12C3.57273 16.0909 7.45455 19 12 19C16.5455 19 20.4273 16.0909 22 12C20.4273 7.90909 16.5455 5 12 5ZM12 17C9.79091 17 8 15.2091 8 12C8 8.79091 9.79091 7 12 7C14.2091 7 16 8.79091 16 12C16 15.2091 14.2091 17 12 17ZM12 9C10.8955 9 10 9.89545 10 11C10 12.1045 10.8955 13 12 13C13.1045 13 14 12.1045 14 11C14 9.89545 13.1045 9 12 9Z" fill="currentColor"/></svg> 909</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="stati-card" style="text-decoration: none; color: inherit; display: block;">
+                    <div class="stati-card__img-wrap">
+                        <img src="./assets/images/stati.png" alt="" class="stati-card__img" />
+                    </div>
+                    <div class="stati-card__body">
+                        <h3 class="stati-card__title">Взрослые дети алкоголиков</h3>
+                        <p class="stati-card__snippet">В нашем обществе существует множество понятий, которые...</p>
+                        <div class="stati-card__meta">
+                            <span class="stati-card__date">12.11.2025</span>
+                            <span class="stati-card__views"><svg class="stati-card__eye" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5C7.45455 5 3.57273 7.90909 2 12C3.57273 16.0909 7.45455 19 12 19C16.5455 19 20.4273 16.0909 22 12C20.4273 7.90909 16.5455 5 12 5ZM12 17C9.79091 17 8 15.2091 8 12C8 8.79091 9.79091 7 12 7C14.2091 7 16 8.79091 16 12C16 15.2091 14.2091 17 12 17ZM12 9C10.8955 9 10 9.89545 10 11C10 12.1045 10.8955 13 12 13C13.1045 13 14 12.1045 14 11C14 9.89545 13.1045 9 12 9Z" fill="currentColor"/></svg> 909</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="stati-card" style="text-decoration: none; color: inherit; display: block;">
+                    <div class="stati-card__img-wrap">
+                        <img src="./assets/images/stati.png" alt="" class="stati-card__img" />
+                    </div>
+                    <div class="stati-card__body">
+                        <h3 class="stati-card__title">Зависимость от экстази: как распознать и помочь?</h3>
+                        <p class="stati-card__snippet">В нашем обществе существует множество понятий, которые...</p>
+                        <div class="stati-card__meta">
+                            <span class="stati-card__date">12.11.2025</span>
+                            <span class="stati-card__views"><svg class="stati-card__eye" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5C7.45455 5 3.57273 7.90909 2 12C3.57273 16.0909 7.45455 19 12 19C16.5455 19 20.4273 16.0909 22 12C20.4273 7.90909 16.5455 5 12 5ZM12 17C9.79091 17 8 15.2091 8 12C8 8.79091 9.79091 7 12 7C14.2091 7 16 8.79091 16 12C16 15.2091 14.2091 17 12 17ZM12 9C10.8955 9 10 9.89545 10 11C10 12.1045 10.8955 13 12 13C13.1045 13 14 12.1045 14 11C14 9.89545 13.1045 9 12 9Z" fill="currentColor"/></svg> 909</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+        </div>
+
+    </main>
+
+    <!-- Блок быстрого вызова врача -->
+    <section class="quick-call">
+        <div class="quick-call__container">
+            <div class="quick-call__content">
+                <div class="quick-call__text">
+                    <h2 class="quick-call__title">Быстрый вызов врача</h2>
+                    <p class="quick-call__description">Круглосуточная служба вызова нарколога на дом в Москве. Анонимно, профессионально, быстро.</p>
+                </div>
+                <form class="quick-call__form">
+                    <div class="quick-call__form-row">
+                        <div class="quick-call__input-wrapper">
+                            <input type="text" class="quick-call__input quick-call__input--name" placeholder="Александр" />
+                            <img src="./assets/images/green.svg" alt="✓" class="quick-call__checkmark" />
+                        </div>
+                        <div class="quick-call__input-wrapper">
+                            <input type="tel" class="quick-call__input quick-call__input--phone" placeholder="8 (900) 344-43-41" />
+                        </div>
+                        <textarea class="quick-call__input quick-call__input--textarea" rows="3" placeholder="Опишите ситуацию"></textarea>
+                    </div>
+                    <div class="quick-call__form-actions">
+                        <button type="submit" class="quick-call__button">
+                            <img src="./assets/images/alarm.svg" alt="Вызов" class="quick-call__button-icon" />
+                            <span class="quick-call__button-text">Вызвать врача</span>
+                            <span class="quick-call__button-text-desktop">Вызвать врача сейчас</span>
+                        </button>
+                        <label class="quick-call__checkbox">
+                            <input type="checkbox" checked required />
+                            <span>Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности и пользовательским соглашением</span>
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__all">
+          <div class="footer__info">
+            <div class="footer__column">
+              <div class="footer__logo">
+                <img src="./assets/images/whitetruck.svg" alt="Логотип">
+                <span class="footer__logo-text">Выездная наркология</span>
+              </div>
+              <div class="footer__section">
+                <p>Круглосуточная служба вызова нарколога на дом в Москве. Профессиональная помощь при алкогольной и
+                  наркотической зависимости.</p>
+              </div>
+            </div>
+            <div class="footer__column">
+              <div class="footer__section">
+                <h3 class="footer__section-title">Услуги</h3>
+                <ul class="footer__section-list">
+                  <li><a href="#">Вывод из запоя</a></li>
+                  <li><a href="#">Кодирование от алкоголизма</a></li>
+                  <li><a href="#">Детоксикация</a></li>
+                  <li><a href="#">Психологическая помощь</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__column">
+              <div class="footer__section">
+                <h3 class="footer__section-title">Пациентам</h3>
+                <ul class="footer__section-list">
+                  <li><a href="#">Цены</a></li>
+                  <li><a href="#">Наши врачи</a></li>
+                  <li><a href="#">Отзывы</a></li>
+                  <li><a href="#">Частые вопросы</a></li>
+                  <li><a href="#">Лицензии и документы</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__column">
+              <div class="footer__search">
+                <input type="text" placeholder="Поиск">
+                <button type="submit">
+                  <img src="./assets/images/search.svg" style=" filter: brightness(0) invert(1);" alt="Поиск">
+                </button>
+              </div>
+              <div class="footer__section">
+                <h3 class="footer__section-title">Контакты</h3>
+                <ul class="footer__contacts-list">
+                  <li>
+                    <img src="./assets/images/phone.svg" alt="Телефон">
+                    <span>+7 (495) 123-45-67</span>
+                  </li>
+                  <li>
+                    <img src="./assets/images/calendar.svg" alt="Режим работы">
+                    <span>Круглосуточно 24/7</span>
+                  </li>
+                  <li>
+                    <img src="./assets/images/location.svg" alt="Адрес">
+                    <span>Москва, ул. Тверская, 15</span>
+                  </li>
+                  <li>
+                    <img src="./assets/images/email.svg" alt="Email">
+                    <span>info@vyezd-narkolog.ru</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer__copyright">
+            <p>© 2025 Выездная Наркология. Все права защищены. Лицензия № ЛО-77-01-012345</p>
+            <div class="footer__copyright-links">
+              <a href="#">Политика конфиденциальности</a>
+              <span>|</span>
+              <a href="#">Пользовательское соглашение</a>
+              <span>|</span>
+              <a href="#">Карта сайта</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+  
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const menuClose = document.getElementById('menuClose');
+        const mobileMenu = document.getElementById('mobileMenu');
+        if (menuToggle) menuToggle.addEventListener('click', () => mobileMenu.classList.add('active'));
+        if (menuClose) menuClose.addEventListener('click', () => mobileMenu.classList.remove('active'));
+
+        const header = document.getElementById('header');
+        const hero = document.querySelector('.uslugi-hero');
+        if (header && hero) {
+            window.addEventListener('scroll', () => {
+                header.classList.toggle('header--light', window.scrollY > hero.offsetHeight / 2);
+            });
+        }
+    </script>
+</body>
+
+</html>

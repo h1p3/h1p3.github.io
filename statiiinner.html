@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Unbounded&display=swap" rel="stylesheet" />
+    <title>Вывод из запоя — Выездная наркология</title>
+
+    <link href="./assets/css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="./assets/js/script.js"></script>
+
+</head>
+
+<body class="service-inner">
+
+    <header class="header" id="header">
+        <div class="header__inner" style="flex-direction: column;">
+            <div class="header__inner">
+                <a href="index.html" class="header__logo">
+                    <img src="./assets/images/purpletruck.svg" alt="Логотип" />
+                    Выездная<br>наркология
+                </a>
+                <div class="header__leadmagnit">
+                    <div class="header__phone">
+                        <img src="./assets/images/purplecalendar.svg" alt="Расписание" />
+                        <p>Круглосуточно</p>
+                    </div>
+                    <div class="header__location">
+                        <img src="./assets/images/purplelocation.svg" alt="Местоположение" />
+                        Москва, ул. Тверская, 15
+                    </div>
+                </div>
+                <button class="header__cta-button">Вызвать врача</button>
+                <div class="header_mobile-buttons">
+                    <button class="menu__toggle" id="menuToggle">
+                        <div class="header__mobile-icon" style="padding: 0;">
+                            <img src="./assets/images/purpleburger.svg" alt="Меню" />
+                        </div>
+                    </button>
+                    <div class="header__mobile-icon">
+                        <img src="./assets/images/purplephone.svg" alt="Телефон" />
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="header__nav-container">
+            <nav class="header__nav header__nav-wrapper">
+                <li class="header__nav-item"><a href="about.html" class="header__nav-link" data-dropdown-trigger="about">О нас</a></li>
+                <li class="header__nav-item"><a href="uslugiouter.html" class="header__nav-link header__nav-link--active" data-dropdown-trigger="uslugi">Услуги</a></li>
+                <li class="header__nav-item"><a href="prices.html" class="header__nav-link" data-dropdown-trigger="prices">Цены</a></li>
+                <li class="header__nav-item"><a href="vrachiouter.html" class="header__nav-link" data-dropdown-trigger="vrachi">Врачи</a></li>
+                <li class="header__nav-item"><a href="rev.html" class="header__nav-link" data-dropdown-trigger="reviews">Отзывы</a></li>
+                <li class="header__nav-item"><a href="faq.html" class="header__nav-link" data-dropdown-trigger="faq">Вопросы</a></li>
+            </nav>
+            <a href="tel:+74951234567" class="header__phone-desktop">
+                <img src="./assets/images/phone.svg" alt="Телефон" />
+                +7 (495) 123-45-67
+            </a>
+            </div>
+            <div class="header__dropdown" id="headerDropdown">
+                <div class="header__dropdown-panel" data-dropdown-panel="uslugi">
+                    <div class="header__dropdown-inner">
+                        <div class="header__dropdown-left">
+                            <a href="uslugiouter.html" class="header__dropdown-cat header__dropdown-cat--active" data-dropdown-cat="alkogolizm">Алкоголизм<span class="header__dropdown-cat-arrow"><svg width="12" height="12" viewBox="0 0 8 12" fill="none"><path d="M1 1L6 6L1 11" stroke="currentColor" stroke-width="2"/></svg></span></a>
+                            <a href="uslugiouter.html" class="header__dropdown-cat" data-dropdown-cat="kodirovanie">Кодирование<span class="header__dropdown-cat-arrow"><svg width="12" height="12" viewBox="0 0 8 12" fill="none"><path d="M1 1L6 6L1 11" stroke="currentColor" stroke-width="2"/></svg></span></a>
+                            <a href="uslugiouter.html" class="header__dropdown-cat" data-dropdown-cat="narkomaniya">Наркомания<span class="header__dropdown-cat-arrow"><svg width="12" height="12" viewBox="0 0 8 12" fill="none"><path d="M1 1L6 6L1 11" stroke="currentColor" stroke-width="2"/></svg></span></a>
+                            <a href="uslugiouter.html" class="header__dropdown-cat" data-dropdown-cat="nadomu">На дому<span class="header__dropdown-cat-arrow"><svg width="12" height="12" viewBox="0 0 8 12" fill="none"><path d="M1 1L6 6L1 11" stroke="currentColor" stroke-width="2"/></svg></span></a>
+                        </div>
+                        <div class="header__dropdown-right">
+                            <div class="header__dropdown-services" data-dropdown-services="alkogolizm">
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 6 000 ₽</span><span class="header__dropdown-card-name">Вывод из запоя</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card header__dropdown-card--highlight"><span class="header__dropdown-card-price">от 6 000 ₽</span><span class="header__dropdown-card-name">Длинный текст<br>в две строки</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 6 000 ₽</span><span class="header__dropdown-card-name">Вывод из запоя</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 6 000 ₽</span><span class="header__dropdown-card-name">Вывод из запоя</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 6 000 ₽</span><span class="header__dropdown-card-name">Вывод из запоя</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 6 000 ₽</span><span class="header__dropdown-card-name">Вывод из запоя</span></a>
+                            </div>
+                            <div class="header__dropdown-services" data-dropdown-services="kodirovanie">
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 8 000 ₽</span><span class="header__dropdown-card-name">Медикаментозное кодирование</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 10 000 ₽</span><span class="header__dropdown-card-name">Гипноз</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 7 000 ₽</span><span class="header__dropdown-card-name">Эспераль</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 9 000 ₽</span><span class="header__dropdown-card-name">Двойной блок</span></a>
+                            </div>
+                            <div class="header__dropdown-services" data-dropdown-services="narkomaniya">
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 12 000 ₽</span><span class="header__dropdown-card-name">Детоксикация</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 15 000 ₽</span><span class="header__dropdown-card-name">Снятие ломки</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 18 000 ₽</span><span class="header__dropdown-card-name">УБОД</span></a>
+                            </div>
+                            <div class="header__dropdown-services" data-dropdown-services="nadomu">
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 6 000 ₽</span><span class="header__dropdown-card-name">Вызов врача на дом</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 8 000 ₽</span><span class="header__dropdown-card-name">Капельница на дому</span></a>
+                                <a href="uslugiinner.html" class="header__dropdown-card"><span class="header__dropdown-card-price">от 7 000 ₽</span><span class="header__dropdown-card-name">Консультация на дому</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__dropdown-panel" data-dropdown-panel="about">
+                    <div class="header__dropdown-simple">
+                        <a href="about.html#mission">Миссия</a>
+                        <a href="about.html#team">Команда</a>
+                        <a href="about.html#licenses">Лицензии</a>
+                        <a href="about.html">Вся информация</a>
+                    </div>
+                </div>
+                <div class="header__dropdown-panel" data-dropdown-panel="prices">
+                    <div class="header__dropdown-simple">
+                        <a href="prices.html">Прайс-лист</a>
+                        <a href="prices.html#vyvod">Вывод из запоя</a>
+                        <a href="prices.html#kodirovanie">Кодирование</a>
+                        <a href="calc.html">Калькулятор стоимости</a>
+                    </div>
+                </div>
+                <div class="header__dropdown-panel" data-dropdown-panel="vrachi">
+                    <div class="header__dropdown-simple">
+                        <a href="vrachiouter.html">Все врачи</a>
+                        <a href="vrachiinner.html">Наркологи</a>
+                        <a href="vrachiinner.html">Психотерапевты</a>
+                    </div>
+                </div>
+                <div class="header__dropdown-panel" data-dropdown-panel="reviews">
+                    <div class="header__dropdown-simple">
+                        <a href="rev.html">Все отзывы</a>
+                        <a href="rev.html">Видеоотзывы</a>
+                    </div>
+                </div>
+                <div class="header__dropdown-panel" data-dropdown-panel="faq">
+                    <div class="header__dropdown-simple">
+                        <a href="faq.html">Частые вопросы</a>
+                        <a href="contacts.html">Контакты</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="header__nav--mobile" id="mobileMenu">
+            <button class="menu__close" id="menuClose">
+                <img src="./assets/images/cross.svg" alt="Закрыть" />
+            </button>
+            <a href="#" class="header__nav-link--mobile">О нас</a>
+            <a href="uslugiouter.html" class="header__nav-link--mobile">Услуги</a>
+            <a href="#" class="header__nav-link--mobile">Цены</a>
+            <a href="#" class="header__nav-link--mobile">Врачи</a>
+            <a href="#" class="header__nav-link--mobile">Отзывы</a>
+            <a href="#" class="header__nav-link--mobile">Вопросы</a>
+            <div class="header__location-mobile">
+                <img src="./assets/images/location.svg" alt="Местоположение" />
+                Москва, ул. Тверская, 15
+            </div>
+            <a href="tel:+74951234567" class="header__phone-mobile">
+                <img src="./assets/images/phone.svg" alt="Телефон" />
+                +7 (495) 123-45-67
+            </a>
+            <button class="header__cta-button-mobile">Вызвать врача</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="articles">
+            <div class="articles__inner">
+            <div class="articles__content">
+                <div class="articles__breadcrumb">
+                    <p class="breadcrumb-first"><a href="index.html">Главная</a> | &nbsp;</p> <a href="statiouter.html">Статьи</a>
+                </div>
+                <h1 class="articles__title">Как выбрать метод кодирования от алкоголизма: сравнение подходов и рекомендации врача</h1>
+               
+                <div class="articles__features">
+                    <span class="articles__feature">Время чтения: 10 минут</span>
+                    <span class="articles__feature">Обновлено: 25 ноября 2025</span>
+    
+                </div>
+                <hr>
+                <div class="articles__cta-row">
+                                        <div class="articles__urgent-author">
+                        <img src="./assets/images/vrach4.png" alt="Дмитрий Иванов">
+                        <div>
+                            <div class="articles__urgent-author-name">Дмитрий Иванов</div>
+                            <div class="articles__urgent-author-title">Врач-нарколог, стаж 16 лет</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="articles__image">
+                <img src="./assets/images/emergency.png" alt="Врач скорой помощи" />
+            </div>
+            </div>
+        </section>
+
+
+        <div class="service-layout">
+            <div class="service-layout__inner">
+            <aside class="service-toc">
+                <h2 class="service-toc__title">Содержание</h2>
+                <ul class="service-toc__list" id="tocList">
+                    <li class="service-toc__item"><a href="#chto-takoe-zapoy" class="service-toc__link">Что такое запой?</a></li>
+                    <li class="service-toc__item"><a href="#prichiny" class="service-toc__link">Причины и факторы риска</a></li>
+                    <li class="service-toc__item"><a href="#etapy" class="service-toc__link">Этапы вывода из запоя</a></li>
+                    <li class="service-toc__item"><a href="#metody" class="service-toc__link">Методы выведения</a></li>
+                    <li class="service-toc__item"><a href="#nelzya" class="service-toc__link">Чего НЕЛЬЗЯ делать</a></li>
+
+                </ul>
+                <a href="#" class="service-toc__hide" id="tocHide">Скрыть</a>
+                <a href="#" class="service-toc__show-all" id="tocShowAll">Показать все</a>
+            </aside>
+
+            <article class="service-article" id="article-content">
+                <div class="about__quote">
+                    <div class="about__quote-line"></div>
+                    <blockquote class="about__quote-text">«Кодирование — один из самых востребованных методов лечения алкоголизма. Но как не ошибиться с выбором? Психотерапевтический гипноз или медикаментозные блокаторы? Отвечаем на ключевые вопросы и помогаем принять решение.»</blockquote>
+                </div>
+
+               
+                <h2 class="service-article__title">Выведение из запоя: полное руководство по пониманию, рискам, стадиям и методам помощи</h2>
+
+
+
+
+
+
+
+
+                <p class="service-article__paragraph">
+                    Алкогольная зависимость — хроническое заболевание, которое затрагивает не только физическое здоровье, но и психику, семью и социальную жизнь человека. Одним из самых опасных проявлений алкоголизма является запой — длительное непрерывное употребление спиртного, из которого человек не может выйти самостоятельно без риска для жизни.
+                </p>
+
+
+
+
+                <h2 id="chto-takoe-zapoy">Что такое запой?</h2>
+                <p class="service-article__paragraph">
+                    Запой — это состояние, при котором человек употребляет алкоголь непрерывно в течение нескольких дней или недель, не выходя из состояния опьянения. Каждая новая доза принимается для облегчения абстинентного синдрома (похмелья), что формирует замкнутый круг: прекращение приёма алкоголя вызывает мучительные симптомы, а повторное употребление лишь откладывает их и усугубляет зависимость.
+                </p>
+
+
+
+
+
+
+
+
+
+
+
+
+                <p class="service-article__paragraph">
+                    От бытового «перепоя» запой отличает именно невозможность самостоятельно прекратить употребление и выраженная физическая зависимость. Без медицинской помощи выход из запоя может быть опасен развитием делирия («белой горячки»), судорожного синдрома, обострением хронических заболеваний и другими угрожающими жизни состояниями.
+                </p>
+
+                <h2 id="prichiny">Причины и факторы риска</h2>
+                <p class="service-article__paragraph">
+                    К запоям склонны люди с уже сформированной алкогольной зависимостью. Спровоцировать запой могут стресс, конфликты, праздники, одиночество или, наоборот, «поддержка» пьющего окружения. Важную роль играют генетическая предрасположенность, особенности обмена веществ и психические расстройства (депрессия, тревога).
+                </p>
+
+                <h2 id="etapy">Этапы вывода из запоя</h2>
+                <p class="service-article__paragraph">
+                    Профессиональный вывод из запоя включает оценку состояния пациента, инфузионную терапию (капельницы) для дезинтоксикации, нормализацию водно-электролитного баланса, поддержку работы сердца, печени и нервной системы. При необходимости назначаются седативные и противосудорожные препараты. Процедура может проводиться на дому или в стационаре в зависимости от тяжести состояния.
+                </p>
+
+
+
+
+
+                <div class="prices-card">
+                    <div class="prices-card__header">
+                        <h2 class="prices-card__title">Этапы вывода из запоя на дому</h2>
+                    </div>
+
+                    <div class="prices-card__steps">
+                        <div class="prices-card__step">
+                            <div class="prices-card__number">{1}</div>
+                            <div class="prices-card__content">
+                                <h3 class="prices-card__step-title">Вызов и осмотр</h3>
+                                <p class="prices-card__step-description">Оператор уточняет состояние, адрес и время. Врач приезжает с оборудованием и препаратами.</p>
+                            </div>
+                        </div>
+
+                        <div class="prices-card__step">
+                            <div class="prices-card__number">{2}</div>
+                            <div class="prices-card__content">
+                                <h3 class="prices-card__step-title">Диагностика</h3>
+                                <p class="prices-card__step-description">Измерение давления, пульса, сатурации. Оценка неврологического статуса.</p>
+                            </div>
+                        </div>
+
+                        <div class="prices-card__step">
+                            <div class="prices-card__number">{3}</div>
+                            <div class="prices-card__content">
+                                <h3 class="prices-card__step-title">Детокс-терапия</h3>
+                                <p class="prices-card__step-description">Капельница 60-90 мин: восстановление водно-солевого баланса, снятие тревоги и тошноты.</p>
+                            </div>
+                        </div>
+
+                        <div class="prices-card__step">
+                            <div class="prices-card__number">{4}</div>
+                            <div class="prices-card__content">
+                                <h3 class="prices-card__step-title">Рекомендации</h3>
+                                <p class="prices-card__step-description">Препараты на 24-72 часа, план поведения, консультация по дальнейшему лечению.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+        
+        
+                    <div class="slider__mobile">
+          <div class="swiper-pagination prices-card__pagination swiper-pagination-fraction swiper-pagination-horizontal">{
+            <span class="swiper-pagination-current">1</span> / <span class="swiper-pagination-total">4</span> }</div>
+          <div class="swiper-button-next prices-card__arrow-next"><img src="./assets/images/arrow-long.svg" alt="Далее"></div>
+        </div>
+        
+        
+        
+        
+                </div>
+        
+
+
+
+
+
+
+
+
+                <h2 id="metody">Методы выведения</h2>
+                <p class="service-article__paragraph">
+                    Существуют медикаментозные и немедикаментозные подходы. Медикаментозный вывод из запоя — это комплекс препаратов, подобранных врачом-наркологом после осмотра. Немедикаментозные методы (народные, «домашние») не гарантируют безопасность и могут привести к осложнениям. Мы рекомендуем обращаться к специалистам.
+                </p>
+
+
+
+                <h2 id="pakety">Пакеты услуг</h2>
+                <p class="service-article__paragraph">
+                    Мы предлагаем базовый, расширенный и стационарный пакеты вывода из запоя. Состав и стоимость определяются после осмотра пациента. Подробности уточняйте по телефону.
+                </p>
+
+                <h2 id="stadii">Стадии запоя</h2>
+                <p class="service-article__paragraph">
+                    Выделяют начальную, развёрнутую и тяжёлую стадии запоя. Длительность и интенсивность употребления влияют на тактику лечения и продолжительность восстановления.
+                </p>
+
+                <h2 id="abstinentnyj" class="service-article__h2-accent">Абстинентный синдром («похмелье запоя»)</h2>
+                <p class="service-article__paragraph">
+                    При прекращении употребления алкоголя в запое развивается синдром отмены — это ключевая причина, по которой человек «не может остановиться».
+                </p>
+
+                <ul class="service-article__symptoms">
+                    <li>Резкая тревога, паника, раздражительность.</li>
+                    <li>Тремор рук, век, языка.</li>
+                    <li>Повышенное артериальное давление, тахикардия.</li>
+                    <li>Тошнота, рвота, диарея.</li>
+                    <li>Бессонница, кошмары.</li>
+                    <li>Галлюцинации (зрительные, слуховые) — при тяжёлой форме.</li>
+                    <li>Судороги (алкогольная эпилепсия).</li>
+                    <li>Дезориентация, бред, галлюциноз — при делирии.</li>
+                </ul>
+
+                <div class="about__quote service-article__quote-block">
+                    <div class="about__quote-line"></div>
+                    <div class="service-article__quote-inner">
+                        <p class="service-article__quote-label">Важно:</p>
+                        <p class="service-article__quote-desc">Абстинентный синдром — это не «похмелье», а медицинское экстренное состояние, особенно при длительном запое.</p>
+                        <div class="service-article__quote-doctor">
+                            <img src="./assets/images/vrach4.png" alt="Дмитрий Иванов" class="service-article__quote-doctor-img">
+                            <div class="service-article__quote-doctor-info">
+                                <span class="service-article__quote-doctor-name">Дмитрий Иванов</span>
+                                <span class="service-article__quote-doctor-title">Врач-нарколог, стаж 16 лет</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <h2 id="rezultaty">Наши результаты</h2>
+                <div class="service-article__table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Метод</th>
+                                <th>Принцип действия</th>
+                                <th>Срок</th>
+                                <th>Эффективность</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Дисульфирам</td>
+                                <td>Токсическая реакция на алкоголь</td>
+                                <td>1-3 года</td>
+                                <td>80-85%</td>
+                            </tr>
+                            <tr>
+                                <td>Налтрексон</td>
+                                <td>Блокировка «удовольствия» от алкоголя</td>
+                                <td>6-12 месяцев</td>
+                                <td>70-75%</td>
+                            </tr>
+                            <tr>
+                                <td>Довженко</td>
+                                <td>Психоустановка на трезвость</td>
+                                <td>3-5 лет</td>
+                                <td>60-70%</td>
+                            </tr>
+                            <tr>
+                                <td>Двойной блок</td>
+                                <td>Медикамент + гипноз</td>
+                                <td>1-3 года</td>
+                                <td>85-90%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+
+
+                <h2 id="nelzya">Чего НЕЛЬЗЯ делать при выведении из запоя</h2>
+                <ul class="service-article__no-list">
+                    <li>Резко прекращать пить без медицинского сопровождения – риск делирия, судорог, смерти.</li>
+                    <li>Давать «попить чуть-чуть», чтобы «снять дрожь» – это продлевает и усугубляет запой.</li>
+                    <li>Использовать «народные средства» (марганцовка, нашатырь, уксус) – опасно для жизни.</li>
+                    <li>Оставлять человека одного в состоянии тяжёлой абстиненции – возможны суицидальные мысли или остановка дыхания.</li>
+                    <li>Смешивать алкоголь с лекарствами (особенно с транквилизаторами или антидепрессантами) – усиление токсического эффекта.</li>
+                </ul>
+
+                <h2 id="oslozhneniya">Осложнения запоя</h2>
+                <p class="service-article__paragraph">
+                    Запой – это не безобидное состояние. Он может привести к тяжелым, а иногда и необратимым последствиям:
+                </p>
+                <ul class="service-article__symptoms">
+                    <li>Алкогольный делирий (белая горячка) – тяжёлое психотическое состояние с галлюцинациями, бредом, лихорадкой. Смертность – до 15% без лечения.</li>
+                    <li>Алкогольная эпилепсия – судорожные припадки, часто при первой попытке выйти из запоя.</li>
+                    <li>Панкреатит, цирроз печени, кардиомиопатия – хронические последствия.</li>
+                    <li>Энцефалопатия Вернике-Корсакова – необратимое повреждение мозга из-за дефицита витамина В1.</li>
+                    <li>Психозы, депрессии, суицидальные наклонности.</li>
+                </ul>
+
+                <div class="service-article__protivopokazaniya-block" id="protivopokazaniya">
+                    <div class="about__quote-line"></div>
+                    <h2>Противопоказания</h2>
+                    <p class="service-article__paragraph">
+                        Вывод из запоя на дому недоступен при высоком риске осложнений, на фоне:
+                    </p>
+                    <ul class="service-article__symptoms">
+                        <li>Острого инфаркта миокарда или инсульта</li>
+                        <li>Тяжелых психозов (белая горячка с галлюцинациями)</li>
+                        <li>Печеночной или почечной недостаточности</li>
+                        <li>Эпилептического статуса</li>
+                    </ul>
+                    <p class="service-article__paragraph">
+                        В этих случаях нарколог организует госпитализацию в стационар, где больной получит круглосуточное наблюдение.
+                    </p>
+                </div>
+
+
+
+
+
+
+
+
+                <h2 id="profilaktika">Профилактика</h2>
+                <p class="service-article__paragraph">
+                    После вывода из запоя важны психологическая поддержка, работа с причинами зависимости и, при необходимости, кодирование или длительная реабилитация. Мы сопровождаем пациента на всех этапах.
+                </p>
+
+                <div class="service-article__urgent-block" id="srochno">
+                    <div class="about__quote-line"></div>
+                    <p class="service-article__urgent-quote">Главное — вовремя признать проблему и обратиться за профессиональной помощью. Алкоголизм излечим, но только при условии комплексного подхода и искреннего желания пациента изменить свою жизнь.</p>
+                    <div class="service-article__urgent-author">
+                        <img src="./assets/images/vrach4.png" alt="Дмитрий Иванов">
+                        <div>
+                            <div class="service-article__urgent-author-name">Дмитрий Иванов</div>
+                            <div class="service-article__urgent-author-title">Врач-нарколог, стаж 16 лет</div>
+                        </div>
+                    </div>
+                </div>
+                <p class="service-article__urgent-important"><strong>Важно:</strong> Если вы или ваш близкий находитесь в запое — не откладывайте. Позвоните в службу скорой помощи или в специализированный наркологический центр. Каждый час задержки повышает риск необратимых последствий.</p>
+
+                <!-- Блок консультации (десктоп: перед литературой) -->
+                <section class="consultation-request consultation-request--desktop">
+                    <div class="consultation-request__wrap">
+                        <div class="consultation-request__inner">
+                            <div class="consultation-request__left">
+                                <h2 class="consultation-request__title">Нужна консультация по выбору метода?</h2>
+                                <p class="consultation-request__desc">Оставьте заявку — нарколог перезвонит в течение 15 минут и поможет определиться.</p>
+                                <div class="consultation-request__badges">
+                                    <span class="consultation-request__badge">Анонимно</span>
+                                    <span class="consultation-request__badge">Бесплатно</span>
+                                    <span class="consultation-request__badge">Круглосуточно</span>
+                                </div>
+                            </div>
+                            <div class="consultation-request__right">
+                                <form class="consultation-request__form">
+                                    <div class="consultation-request__input-wrap">
+                                        <input type="text" class="consultation-request__input" name="name" placeholder="Ваше имя" />
+                                        <img src="./assets/images/green.svg" alt="" class="consultation-request__checkmark" />
+                                    </div>
+                                    <div class="consultation-request__input-wrap">
+                                        <input type="tel" class="consultation-request__input" name="phone" placeholder="Ваш номер" />
+                                    </div>
+                                    <button type="submit" class="consultation-request__submit">Получить консультацию</button>
+                                    <label class="consultation-request__agree">
+                                        <input type="checkbox" checked required />
+                                        <span class="consultation-request__checkbox-box"></span>
+                                        <span class="consultation-request__agree-text">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности и пользовательским соглашением</span>
+                                    </label>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="service-article__literatura-block" id="literatura">
+                    <h2>Используемая литература</h2>
+                    <ul class="service-article__literatura-list">
+                        <li><p class="service-article__literatura-number">{&nbsp;1&nbsp;}</p>
+                            <p class="service-article__literatura-name">Морозов Г.В., Рожнов В.Е. «Алкоголизм. 
+                                Руководство для врачей»</p></li>
+                        <li><p class="service-article__literatura-number">{&nbsp;2&nbsp;}</p>
+                            <p class="service-article__literatura-name">Успенский А.Е. Биохимические маркеры употребления алкоголя // Клин. мед. — 1986.</p></li>
+                        <li><p class="service-article__literatura-number">{&nbsp;3&nbsp;}</p>
+                            <p class="service-article__literatura-name">Ашмарин И.П., Стукалов П.В. «Нейрохимия». — М.: Медицина, 1996.</p></li>
+                        <li><p class="service-article__literatura-number">{&nbsp;4&nbsp;}</p>
+                            <p class="service-article__literatura-name">Алкогольная зависимость: диагностика и лечение / Под ред. акад. РАМН В.Д. Менделевича.</p></li>
+                        <li><p class="service-article__literatura-number">{&nbsp;5&nbsp;}</p>
+                            <p class="service-article__literatura-name">Клинические рекомендации Минздрава РФ по лечению зависимостей (2023 г.)</p></li>
+                    </ul>
+                </div>
+
+                <div class="service-article__author-cards" id="avtory">
+                    <div class="service-article__author-card">
+                        <div class="service-article__author-card-header">
+                            <span class="service-article__author-card-title">Автор статьи:</span>
+                            <a href="#" class="service-article__author-card-more">Подробнее</a>
+                        </div>
+                        <div class="service-article__author-card-body">
+                            <img src="./assets/images/vrach4.png" alt="Дмитрий Иванов">
+                            <div>
+                                <h6 class="service-article__author-card-name">Дмитрий Иванов</h6>
+                                <div class="service-article__author-card-subtitle">Врач-нарколог | стаж 16 лет</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-article__author-card">
+                        <div class="service-article__author-card-header">
+                            <span class="service-article__author-card-title">Статьи проверил:</span>
+                            <a href="#" class="service-article__author-card-more">Подробнее</a>
+                        </div>
+                        <div class="service-article__author-card-body">
+                            <img src="./assets/images/vrach4.png" alt="Александра Коновалова">
+                            <div>
+                                <h6 class="service-article__author-card-name">Александра Коновалова</h6>
+                                <div class="service-article__author-card-subtitle">Главный врач, к.м.н.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            </div>
+        </div>
+
+
+
+    </main>
+
+    <!-- Блок консультации (мобилка: перед футером) -->
+    <section class="consultation-request consultation-request--mobile">
+        <div class="consultation-request__wrap">
+            <div class="consultation-request__inner">
+                <h2 class="consultation-request__title">Нужна консультация по выбору метода?</h2>
+                <p class="consultation-request__desc">Оставьте заявку — нарколог перезвонит в течение 15 минут и поможет определиться.</p>
+                <div class="consultation-request__badges">
+                    <span class="consultation-request__badge">Анонимно</span>
+                    <span class="consultation-request__badge">Бесплатно</span>
+                    <span class="consultation-request__badge">Круглосуточно</span>
+                </div>
+                <form class="consultation-request__form">
+                    <div class="consultation-request__input-wrap">
+                        <input type="text" class="consultation-request__input" name="name" placeholder="Александр" />
+                        <img src="./assets/images/green.svg" alt="" class="consultation-request__checkmark" />
+                    </div>
+                    <div class="consultation-request__input-wrap">
+                        <input type="tel" class="consultation-request__input" name="phone" placeholder="8 (900) 344-43-41" />
+                    </div>
+                    <button type="submit" class="consultation-request__submit">Получить консультацию</button>
+                    <label class="consultation-request__agree">
+                        <input type="checkbox" checked required />
+                        <span class="consultation-request__checkbox-box"></span>
+                        <span class="consultation-request__agree-text">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности и пользовательским соглашением</span>
+                    </label>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__all">
+          <div class="footer__info">
+            <div class="footer__column">
+              <div class="footer__logo">
+                <img src="./assets/images/whitetruck.svg" alt="Логотип">
+                <span class="footer__logo-text">Выездная наркология</span>
+              </div>
+              <div class="footer__section">
+                <p>Круглосуточная служба вызова нарколога на дом в Москве. Профессиональная помощь при алкогольной и
+                  наркотической зависимости.</p>
+              </div>
+            </div>
+            <div class="footer__column">
+              <div class="footer__section">
+                <h3 class="footer__section-title">Услуги</h3>
+                <ul class="footer__section-list">
+                  <li><a href="#">Вывод из запоя</a></li>
+                  <li><a href="#">Кодирование от алкоголизма</a></li>
+                  <li><a href="#">Детоксикация</a></li>
+                  <li><a href="#">Психологическая помощь</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__column">
+              <div class="footer__section">
+                <h3 class="footer__section-title">Пациентам</h3>
+                <ul class="footer__section-list">
+                  <li><a href="#">Цены</a></li>
+                  <li><a href="#">Наши врачи</a></li>
+                  <li><a href="#">Отзывы</a></li>
+                  <li><a href="#">Частые вопросы</a></li>
+                  <li><a href="#">Лицензии и документы</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__column">
+              <div class="footer__search">
+                <input type="text" placeholder="Поиск">
+                <button type="submit">
+                  <img src="./assets/images/search.svg" style=" filter: brightness(0) invert(1);" alt="Поиск">
+                </button>
+              </div>
+              <div class="footer__section">
+                <h3 class="footer__section-title">Контакты</h3>
+                <ul class="footer__contacts-list">
+                  <li>
+                    <img src="./assets/images/phone.svg" alt="Телефон">
+                    <span>+7 (495) 123-45-67</span>
+                  </li>
+                  <li>
+                    <img src="./assets/images/calendar.svg" alt="Режим работы">
+                    <span>Круглосуточно 24/7</span>
+                  </li>
+                  <li>
+                    <img src="./assets/images/location.svg" alt="Адрес">
+                    <span>Москва, ул. Тверская, 15</span>
+                  </li>
+                  <li>
+                    <img src="./assets/images/email.svg" alt="Email">
+                    <span>info@vyezd-narkolog.ru</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer__copyright">
+            <p>© 2025 Выездная Наркология. Все права защищены. Лицензия № ЛО-77-01-012345</p>
+            <div class="footer__copyright-links">
+              <a href="#">Политика конфиденциальности</a>
+              <span>|</span>
+              <a href="#">Пользовательское соглашение</a>
+              <span>|</span>
+              <a href="#">Карта сайта</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+  
+
+</body>
+
+</html>
