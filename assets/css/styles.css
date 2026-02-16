@@ -1616,7 +1616,7 @@ line-height: 140%;
 
 .service-card__title {
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 400;
     margin-bottom: 8px;
     color: var(--primary-color);
 }
