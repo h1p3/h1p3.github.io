@@ -2253,6 +2253,27 @@ line-height: 140%;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     overflow: hidden;
     /* flex-shrink: 0; */
+    transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.doctors__card:hover,
+.doctors__card:active {
+    background: linear-gradient(135deg, #7a6bea, #5e4bb8);
+    color: white;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.doctors__card:hover .doctors__name,
+.doctors__card:active .doctors__name,
+.doctors__card:hover .doctors__specialty,
+.doctors__card:active .doctors__specialty {
+    color: white;
+}
+
+.doctors__card:hover .doctors__experience,
+.doctors__card:active .doctors__experience {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
 }
 
 .doctors__card-image {
@@ -2310,21 +2331,6 @@ line-height: 140%;
     font-size: 14px;
     color: #666;
     line-height: 1.4;
-}
-
-.doctors__card--highlighted {
-    background: linear-gradient(135deg, #7a6bea, #5e4bb8);
-    color: white;
-}
-
-.doctors__card--highlighted .doctors__name,
-.doctors__card--highlighted .doctors__specialty {
-    color: white;
-}
-
-.doctors__card--highlighted .doctors__experience {
-    background: rgba(255, 255, 255, 0.9);
-    color: #333;
 }
 
 .doctors__nav {
