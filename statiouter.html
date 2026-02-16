@@ -35,7 +35,7 @@
 
 <body>
 
-    <header class="header" id="header">
+    <header class="header header--light" id="header">
         <div class="header__inner" style="flex-direction: column;">
 
             <div class="header__inner">
@@ -439,13 +439,13 @@
         if (menuToggle) menuToggle.addEventListener('click', () => mobileMenu.classList.add('active'));
         if (menuClose) menuClose.addEventListener('click', () => mobileMenu.classList.remove('active'));
 
-        const header = document.getElementById('header');
-        const hero = document.querySelector('.uslugi-hero');
-        if (header && hero) {
-            window.addEventListener('scroll', () => {
-                header.classList.toggle('header--light', window.scrollY > hero.offsetHeight / 2);
-            });
-        }
+        // const header = document.getElementById('header');
+        // const hero = document.querySelector('.uslugi-hero');
+        // if (header && hero) {
+        //     window.addEventListener('scroll', () => {
+        //         header.classList.toggle('header--light', window.scrollY > hero.offsetHeight / 2);
+        //     });
+        // }
     </script>
 </body>
 

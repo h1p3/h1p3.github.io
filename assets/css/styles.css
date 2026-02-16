@@ -1898,7 +1898,7 @@ line-height: 140%;
     }
 
     .call-process__steps {
-        flex-direction: column;
+        /* flex-direction: column; */
         gap: 20px;
     }
 
@@ -2813,10 +2813,12 @@ line-height: 140%;
 
     .doctor-brings {
         flex-direction: column;
+        height: auto;
     }
 
     .doctor-brings__image {
-        width: 100%;
+        width: auto;
+        height: 100%;
     }
 }
 
