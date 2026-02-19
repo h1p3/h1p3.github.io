@@ -9115,21 +9115,23 @@ line-height: 140%;
     .consultation-request__inner {
         flex-direction: row;
         align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: space-between;
         gap: 40px;
         padding: 48px 40px;
     }
 
     .consultation-request__left {
         flex: 1;
-        max-width: 400px;
+        max-width: 508px;
     }
 
     .consultation-request__right {
         flex: 1;
-        max-width: 480px;
+        max-width: 360px;
     }
 
-    .consultation-request__title {
+    h2.consultation-request__title {
         font-size: 32px;
         margin-bottom: 16px;
     }
@@ -9153,10 +9155,6 @@ line-height: 140%;
 
     .consultation-request__agree {
         font-size: 14px;
-    }
-
-    .consultation-request__agree-text {
-        color: #4a4a4a;
     }
 }
 
